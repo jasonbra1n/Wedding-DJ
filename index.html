@@ -153,5 +153,62 @@
   </footer>
 
   <!-- tiny dark-mode toggle or analytics can go here -->
+html
+
+<script>
+/*  Aurora Hero – serotonin edition  */
+(() => {
+  const cvs = document.createElement('canvas');
+  Object.assign(cvs.style, {position:'fixed',inset:0,zIndex:-3,mixBlendMode:'screen',pointerEvents:'none'});
+  document.body.prepend(cvs);
+  const ctx = cvs.getContext('2d');
+  let w = innerWidth, h = innerHeight;
+  const resize = () => { w = cvs.width = innerWidth; h = cvs.height = innerHeight; };
+  addEventListener('resize', resize); resize();
+
+  /* pastel palette */
+  const colors = [
+    {r:255,g:182,b:193,a:.28},  /* lightpink   */
+    {r:255,g:218,b:185,a:.26},  /* peach       */
+    {r:250,g:243,b:221,a:.24},  /* cream       */
+    {r:255,g:239,b:213,a:.25}   /* papaya whip */
+  ];
+
+  const blobs = Array.from({length:5}, () => ({
+    x: Math.random()*w,
+    y: Math.random()*h,
+    r: Math.random()*Math.min(w,h)*.25 + 120,
+    dx: (Math.random()-.5)*.2,
+    dy: (Math.random()-.5)*.2,
+    phase: Math.random()*6.28,
+    speed: .005 + Math.random()*.005,
+    color: colors[Math.floor(Math.random()*colors.length)]
+  }));
+
+  function draw(t){
+    ctx.clearRect(0,0,w,h);
+    blobs.forEach(b=>{
+      b.phase += b.speed;
+      b.x += b.dx; b.y += b.dy;
+      /* gentle wrapping */
+      if (b.x-b.r > w) b.x = -b.r;
+      if (b.x+b.r < 0) b.x = w+b.r;
+      if (b.y-b.r > h) b.y = -b.r;
+      if (b.y+b.r < 0) b.y = h+b.r;
+
+      const pulse = Math.sin(b.phase) * .03 + 1;
+      const g = ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r*pulse);
+      const {r,g:gr,b:bl,a} = b.color;
+      g.addColorStop(0,`rgba(${r},${gr},${bl},${a})`);
+      g.addColorStop(1,`rgba(${r},${gr},${bl},0)`);
+      ctx.fillStyle = g;
+      ctx.fillRect(0,0,w,h);
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+  
 </body>
 </html>

@@ -1,214 +1,279 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Haliburton Wedding DJ – Jason Brain | Outdoor Tent Parties</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Jason Brain – Haliburton’s outdoor-wedding DJ. RGB DMX lighting, fog, pro sound in barns, backyards & party tents. Book 2025 dates now.">
-  <meta name="keywords" content="wedding dj haliburton ontario, outdoor wedding music, party tent dj, barn wedding dj, rgb lights fog machine">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premier Wedding DJ in Haliburton, Minden, and Kawartha Lakes, Ontario. Jason Brain offers RGB DMX lights, fog machines, custom sound systems, and personalized playlists for weddings in halls, backyards, barns, and party tents. Book now for 2026!">
+  <meta name="keywords" content="Wedding DJ Haliburton Ontario, Minden DJ, Kawartha Lakes wedding music, outdoor wedding DJ, RGB DMX lights, fog machine, custom sound system, personalized wedding music">
   <meta name="author" content="Jason Brain">
-
-  <!-- OpenGraph / social -->
-  <meta property="og:title" content="Haliburton Wedding DJ – Jason Brain">
-  <meta property="og:description" content="Unforgettable dance parties under the stars in Haliburton’s most beautiful venues.">
-  <meta property="og:image" content="https://weddingdj.jasonbrain.com/assets/hero-golden-hour.jpg">
-  <meta property="og:url" content="https://weddingdj.jasonbrain.com">
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
-
-  <!-- Critical inline CSS -->
+  <title>Wedding DJ Haliburton, Minden & Kawartha Lakes | Jason Brain</title>
   <style>
-    :root{
-      --gold:#f3c669;
-      --peach:#ffb88c;
-      --rose:#ff6f61;
-      --dark:#222;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#fff;background:#000}
-    header{position:relative;height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden}
-    header picture{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-    header::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:-1}
-    h1{font-size:clamp(2.2rem,6vw,4rem);letter-spacing:.05em;text-shadow:0 2px 8px rgba(0,0,0,.7)}
-    .tagline{font-size:clamp(1rem,2.5vw,1.5rem);margin:.5rem 0 1.5rem}
-    .btn{background:var(--rose);color:#fff;border:none;padding:.9rem 2.1rem;font-size:1.1rem;border-radius:50px;cursor:pointer;transition:.3s}
-    .btn:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 6px 20px #ff6f6199}
-    section{max-width:1100px;margin:0 auto;padding:4rem 1.2rem}
-    .split{display:grid;gap:2.2rem;align-items:center}
-    .split img{width:100%;border-radius:10px}
-    h2{font-size:2.2rem;margin-bottom:.8rem;color:var(--gold)}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem}
-    .gallery img{width:100%;border-radius:8px;transition:.3s}
-    .gallery img:hover{transform:scale(1.03)}
-    form{display:grid;gap:1rem}
-    input,textarea,button{font:inherit;padding:.7rem;border-radius:6px;border:none}
-    textarea{min-height:120px;resize:vertical}
-    footer{background:#111;text-align:center;padding:1rem;font-size:.85rem;color:#aaa}
-    @media (min-width:768px){
-      .split{grid-template-columns:1fr 1fr}
-      section{padding:5rem 2rem}
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(180deg, #291259, #8146ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background: url('https://jasonbrain.com/wp-content/uploads/sites/11/2021/10/242376498_3113934998747905_8186182782864639435_n.jpeg') no-repeat center/cover;
+      background-attachment: fixed;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(3, 3, 130, 0.12) 0%, rgba(41, 18, 89, 0.76) 100%);
+    }
+    header h1 {
+      font-size: 3.5rem;
+      z-index: 1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    header p {
+      font-size: 1.5rem;
+      z-index: 1;
+      margin: 1rem 0;
+    }
+    .cta-button {
+      z-index: 1;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease;
+    }
+    .cta-button:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .cta-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 111, 97, 0.7);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+    }
+    .about, .venues, .gallery, .contact {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #291259;
+    }
+    .venues {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .venue-card {
+      background: #f9f1f1;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 200px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .venue-card:hover {
+      transform: translateY(-5px);
+    }
+    .venue-card img {
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid #291259;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #291259;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .mix-player {
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .mix-player audio {
+      width: 80%;
+      max-width: 500px;
+    }
+    .lights {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      mix-blend-mode: overlay;
+    }
+    footer {
+      background: #291259;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .venue-card {
+        width: 150px;
+      }
     }
   </style>
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Jason Brain Wedding DJ",
-    "image":"https://weddingdj.jasonbrain.com/assets/hero-golden-hour.jpg",
-    "url":"https://weddingdj.jasonbrain.com",
-    "telephone":"+17055551234",
-    "email":"jason@weddingdj.jasonbrain.com",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"",
-      "addressLocality":"Haliburton",
-      "addressRegion":"ON",
-      "postalCode":"K0M",
-      "addressCountry":"CA"
-    },
-    "serviceType":"Wedding DJ Services",
-    "areaServed":"Haliburton County, Ontario"
-  }
-  </script>
 </head>
-
 <body>
-  <!-- HERO -->
-  <header id="top">
-    <picture>
-      <source srcset="assets/hero-golden-hour.webp" type="image/webp">
-      <img src="assets/hero-golden-hour.jpg" alt="Outdoor wedding tent under golden hour sunset with colourful RGB lighting" width="1920" height="1080" loading="eager" fetchpriority="high">
-    </picture>
-    <div>
-      <h1>Haliburton Wedding DJ</h1>
-      <p class="tagline">Golden hour vows, midnight dance-floor magic.</p>
-      <button class="btn" onclick="document.getElementById('book').scrollIntoView()">Book Your Date</button>
-    </div>
+  <canvas class="lights"></canvas>
+  <header>
+    <h1>DJ Services: Booking Now for 2026</h1>
+    <p>Premier Wedding DJ in Haliburton, Minden & Kawartha Lakes</p>
+    <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book Your Dance Party!</button>
   </header>
-
-  <!-- ABOUT -->
-  <section aria-label="About Jason">
-    <div class="split">
-      <div>
-        <h2>Meet Jason Brain</h2>
-        <p>From first dance to last call, I craft soundtracks that feel <em>yours</em>. 15 years of mixing in backyards, century barns, lakeside marquees and forest clearings across Haliburton.  My kit travels: line-array sound, wireless mics, RGB-DMX uplights, low-lying fog, and backup power so the party never stops.</p>
+  <div class="container">
+    <section class="about">
+      <h2>About Jason Brain</h2>
+      <p>With over 30 years of experience, I’m Jason Brain, your premier Wedding DJ serving Haliburton, Minden, Kawartha Lakes, and Peterborough. From public school dances to nightclubs in Toronto, I’ve honed my craft to create unforgettable wedding dance parties. I bring my own professional sound system, wireless microphones for speeches, RGB DMX lights, and a fog machine to deliver a vibrant disco-party vibe. Working closely with brides and grooms, I craft personalized playlists, incorporating music videos and visuals for an immersive experience in halls, backyards, barns, or party tents.</p>
+      <div class="mix-player">
+        <h3>Sample Mix</h3>
+        <audio controls src="https://jasonbrain.com/sample-mix.mp3"></audio>
+        <p>Listen to a sample of my wedding mixes!</p>
       </div>
-      <img src="assets/dj-console-outdoor.jpg" alt="Jason behind DJ console at sunset tent wedding">
-    </div>
-  </section>
-
-  <!-- VENUES -->
-  <section aria-label="Venues">
-    <h2>Where We Party</h2>
-    <div class="gallery">
-      <img src="assets/venue-tent.jpg" alt="White sailcloth party tent with bistro lights">
-      <img src="assets/venue-barn.jpg" alt="Rustic barn wedding reception">
-      <img src="assets/venue-backyard.jpg" alt="Lakeside backyard reception at dusk">
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section aria-label="Gallery">
-    <h2>Moments</h2>
-    <div class="gallery">
-      <img src="assets/gallery-1.jpg" alt="Couple first dance under starry RGB uplights">
-      <img src="assets/gallery-2.jpg" alt="Crowd dancing with fog and laser beams">
-      <img src="assets/gallery-3.jpg" alt="Bride and groom cheering on dance floor">
-    </div>
-  </section>
-
-  <!-- BOOKING -->
-  <section id="book" aria-label="Contact & booking">
-    <h2>Lock in Your Date</h2>
-    <form name="wedding-inquiry" netlify>
-      <input type="hidden" name="subject" value="New Haliburton DJ inquiry">
-      <label>
-        Your names
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Wedding date
-        <input type="date" name="date" required>
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Tell me about your vision
-        <textarea name="message" placeholder="Venue, guest count, must-play songs..."></textarea>
-      </label>
-      <button class="btn" type="submit">Send &amp; Get Quote</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
+    </section>
+    <section class="venues">
+      <h2>Versatile Venues</h2>
+      <div class="venue-card">
+        <img src="https://via.placeholder.com/200x150?text=Party+Tent" alt="Party tent wedding setup in Haliburton">
+        <p>Party Tents</p>
+      </div>
+      <div class="venue-card">
+        <img src="https://via.placeholder.com/200x150?text=Backyard" alt="Backyard wedding setup in Minden">
+        <p>Backyards</p>
+      </div>
+      <div class="venue-card">
+        <img src="https://via.placeholder.com/200x150?text=Barn" alt="Barn wedding setup in Kawartha Lakes">
+        <p>Barns</p>
+      </div>
+      <div class="venue-card">
+        <img src="https://via.placeholder.com/200x150?text=Hall" alt="Hall wedding setup in Peterborough">
+        <p>Halls</p>
+      </div>
+    </section>
+    <section class="gallery">
+      <h2>Past Events</h2>
+      <img src="https://jasonbrain.com/wp-content/uploads/sites/11/2024/05/djsetup2-3-1024x576.png" alt="DJ setup with RGB lights in Haliburton">
+      <img src="https://via.placeholder.com/300x200?text=Backyard+Party" alt="Backyard wedding dance party in Minden">
+      <img src="https://via.placeholder.com/300x200?text=Barn+Event" alt="Barn wedding with fog machine in Kawartha Lakes">
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:jason@weddingdj.jasonbrain.com">jason@weddingdj.jasonbrain.com</a></p>
+      <p>Phone: (123) 456-7890</p>
+      <p>Ready to plan your dream wedding dance party in Haliburton, Minden, or Kawartha Lakes? Let’s create a personalized experience with music, lights, and vibes just for you!</p>
+    </section>
+  </div>
   <footer>
-    © 2025 Jason Brain · Wedding DJ · Haliburton, Ontario ·
-    <a href="mailto:jason@weddingdj.jasonbrain.com" style="color:#aaa">jason@weddingdj.jasonbrain.com</a>
+    <p>© 2025 Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario</p>
   </footer>
+  <script>
+    const canvas = document.querySelector('.lights');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-  <!-- tiny dark-mode toggle or analytics can go here -->
-html
+    const lights = [];
+    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00']; // RGB DMX colors
+    for (let i = 0; i < 50; i++) {
+      lights.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 4 + 2,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        opacity: Math.random() * 0.5 + 0.3,
+        speed: Math.random() * 0.5 + 0.2
+      });
+    }
 
-<script>
-/*  Aurora Hero – serotonin edition  */
-(() => {
-  const cvs = document.createElement('canvas');
-  Object.assign(cvs.style, {position:'fixed',inset:0,zIndex:-3,mixBlendMode:'screen',pointerEvents:'none'});
-  document.body.prepend(cvs);
-  const ctx = cvs.getContext('2d');
-  let w = innerWidth, h = innerHeight;
-  const resize = () => { w = cvs.width = innerWidth; h = cvs.height = innerHeight; };
-  addEventListener('resize', resize); resize();
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)'; // Subtle fog effect
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      lights.forEach(light => {
+        ctx.beginPath();
+        ctx.arc(light.x, light.y, light.radius, 0, Math.PI * 2);
+        ctx.fillStyle = light.color;
+        ctx.globalAlpha = light.opacity;
+        ctx.fill();
+        light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
+        if (light.opacity < 0.3) light.opacity = 0.3;
+        if (light.opacity > 0.8) light.opacity = 0.8;
+      });
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(animate);
+    }
 
-  /* pastel palette */
-  const colors = [
-    {r:255,g:182,b:193,a:.28},  /* lightpink   */
-    {r:255,g:218,b:185,a:.26},  /* peach       */
-    {r:250,g:243,b:221,a:.24},  /* cream       */
-    {r:255,g:239,b:213,a:.25}   /* papaya whip */
-  ];
-
-  const blobs = Array.from({length:5}, () => ({
-    x: Math.random()*w,
-    y: Math.random()*h,
-    r: Math.random()*Math.min(w,h)*.25 + 120,
-    dx: (Math.random()-.5)*.2,
-    dy: (Math.random()-.5)*.2,
-    phase: Math.random()*6.28,
-    speed: .005 + Math.random()*.005,
-    color: colors[Math.floor(Math.random()*colors.length)]
-  }));
-
-  function draw(t){
-    ctx.clearRect(0,0,w,h);
-    blobs.forEach(b=>{
-      b.phase += b.speed;
-      b.x += b.dx; b.y += b.dy;
-      /* gentle wrapping */
-      if (b.x-b.r > w) b.x = -b.r;
-      if (b.x+b.r < 0) b.x = w+b.r;
-      if (b.y-b.r > h) b.y = -b.r;
-      if (b.y+b.r < 0) b.y = h+b.r;
-
-      const pulse = Math.sin(b.phase) * .03 + 1;
-      const g = ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r*pulse);
-      const {r,g:gr,b:bl,a} = b.color;
-      g.addColorStop(0,`rgba(${r},${gr},${bl},${a})`);
-      g.addColorStop(1,`rgba(${r},${gr},${bl},0)`);
-      ctx.fillStyle = g;
-      ctx.fillRect(0,0,w,h);
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-</script>
-  
+
+    animate();
+  </script>
 </body>
 </html>

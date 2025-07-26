@@ -98,6 +98,13 @@
       margin-bottom: 1rem;
       color: #291259;
     }
+    hr {
+      border: 0;
+      height: 2px;
+      background: linear-gradient(to right, #ff6f61, #8146ff);
+      margin: 2rem auto;
+      width: 50%;
+    }
     .venues {
       display: flex;
       flex-wrap: wrap;
@@ -176,6 +183,9 @@
       .venue-card {
         width: 150px;
       }
+      hr {
+        width: 80%;
+      }
     }
   </style>
 </head>
@@ -198,6 +208,7 @@
     </section>
     <section class="venues">
       <h2>Versatile Venues</h2>
+      <hr>
       <div class="venue-card">
         <img src="images/party-tent.jpg" alt="Party tent wedding setup in Haliburton">
         <p>Party Tents</p>
@@ -217,9 +228,12 @@
     </section>
     <section class="gallery">
       <h2>Past Events</h2>
-      <img src="images/dj-setup.jpg" alt="DJ setup with RGB lights in Haliburton">
-      <img src="images/backyard-party.jpg" alt="Backyard wedding dance party in Minden">
-      <img src="images/barn-event.jpg" alt="Barn wedding with fog machine in Kawartha Lakes">
+      <hr>
+      <div class="gallery">
+        <img src="images/dj-setup.jpg" alt="DJ setup with RGB lights in Haliburton">
+        <img src="images/backyard-party.jpg" alt="Backyard wedding dance party in Minden">
+        <img src="images/barn-event.jpg" alt="Barn wedding with fog machine in Kawartha Lakes">
+      </div>
     </section>
     <section class="contact" id="contact">
       <h2>Contact Me</h2>

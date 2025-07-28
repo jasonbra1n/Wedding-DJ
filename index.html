@@ -186,6 +186,28 @@
     .mix-player .mixcloud-link:hover {
       text-decoration: underline;
     }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+      z-index: 10;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0.8;
+    }
+    .scroll-to-top:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(255, 111, 97, 0.7);
+    }
     footer {
       background: #291259;
       color: white;
@@ -218,6 +240,11 @@
       }
       hr {
         width: 80%;
+      }
+      .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -281,6 +308,7 @@
   <footer>
     <p>© 2025 Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario | <a href="https://jasonbrain.com">More Services</a></p>
   </footer>
+  <button class="scroll-to-top">↑</button>
   <script>
     const canvas = document.querySelector('.lights');
     const ctx = canvas.getContext('2d');
@@ -337,6 +365,19 @@
     canvas.width = header.clientWidth;
     canvas.height = header.clientHeight;
     animate();
+
+    // Scroll to Top Button Logic
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.style.display = 'block';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>

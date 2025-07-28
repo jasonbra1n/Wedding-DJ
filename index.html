@@ -42,18 +42,19 @@
       background: linear-gradient(135deg, rgba(3, 3, 130, 0.12) 0%, rgba(41, 18, 89, 0.76) 100%);
       z-index: -1;
     }
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
     header h1 {
       font-size: 3.5rem;
-      z-index: 1;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     header p {
       font-size: 1.5rem;
-      z-index: 1;
       margin: 1rem 0;
     }
     .cta-button {
-      z-index: 1;
       padding: 1rem 2rem;
       font-size: 1.2rem;
       background: #ff6f61;
@@ -64,6 +65,7 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      pointer-events: auto;
     }
     .cta-button::before {
       content: '';
@@ -218,9 +220,11 @@
 <body>
   <canvas class="lights"></canvas>
   <header>
-    <h1>DJ Services: Booking Now for 2026</h1>
-    <p>Premier Wedding DJ in Haliburton, Minden & Kawartha Lakes</p>
-    <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book Your Dance Party!</button>
+    <div class="header-content">
+      <h1>DJ Services: Booking Now for 2026</h1>
+      <p>Premier Wedding DJ in Haliburton, Minden & Kawartha Lakes</p>
+      <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book Your Dance Party!</button>
+    </div>
   </header>
   <div class="container">
     <section class="about">

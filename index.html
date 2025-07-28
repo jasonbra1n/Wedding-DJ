@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -286,8 +285,9 @@
     const canvas = document.querySelector('.lights');
     const ctx = canvas.getContext('2d');
     const header = document.querySelector('header');
-    const centerX = header.clientWidth / 2;
-    const centerY = header.clientHeight * 0.1; // Polaris-like position at the top
+    // Random center point within 20% to 80% of header dimensions
+    const centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
+    const centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
 
     const lights = [];
     const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
@@ -340,4 +340,3 @@
   </script>
 </body>
 </html>
-```

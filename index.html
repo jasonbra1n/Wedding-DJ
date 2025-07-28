@@ -285,19 +285,22 @@
   <script>
     const canvas = document.querySelector('.lights');
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const header = document.querySelector('header');
+    const centerX = header.clientWidth / 2;
+    const centerY = header.clientHeight * 0.1; // Polaris-like position at the top
 
     const lights = [];
     const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
     for (let i = 0; i < 50; i++) {
+      const radius = Math.random() * (header.clientHeight / 2);
+      const angle = Math.random() * Math.PI * 2;
+      const speed = (Math.random() * 0.02 + 0.01) * (Math.random() < 0.5 ? 1 : -1); // Vary speed and direction
       lights.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 4 + 2,
+        radius,
+        angle,
         color: colors[Math.floor(Math.random() * colors.length)],
         opacity: Math.random() * 0.5 + 0.3,
-        speed: Math.random() * 0.5 + 0.2
+        speed
       });
     }
 
@@ -305,25 +308,34 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
       lights.forEach(light => {
+        light.angle += light.speed;
+        const x = centerX + light.radius * Math.cos(light.angle);
+        const y = centerY + light.radius * Math.sin(light.angle);
+
         ctx.beginPath();
-        ctx.arc(light.x, light.y, light.radius, 0, Math.PI * 2);
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
         ctx.fillStyle = light.color;
         ctx.globalAlpha = light.opacity;
         ctx.fill();
+
         light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
         if (light.opacity < 0.3) light.opacity = 0.3;
         if (light.opacity > 0.8) light.opacity = 0.8;
       });
+
       ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
     }
 
     window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = header.clientWidth;
+      canvas.height = header.clientHeight;
     });
 
+    canvas.width = header.clientWidth;
+    canvas.height = header.clientHeight;
     animate();
   </script>
 </body>

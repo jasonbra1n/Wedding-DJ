@@ -313,9 +313,9 @@
     const canvas = document.querySelector('.lights');
     const ctx = canvas.getContext('2d');
     const header = document.querySelector('header');
-    // Random center point within 20% to 80% of header dimensions
-    const centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
-    const centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
+    // Initialize center point randomly within 20% to 80% of header dimensions
+    let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
+    let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
 
     const lights = [];
     const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
@@ -371,6 +371,22 @@
       ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
     }
+
+    // Update center point based on cursor movement
+    header.addEventListener('mousemove', (event) => {
+      const rect = header.getBoundingClientRect();
+      centerX = event.clientX - rect.left;
+      centerY = event.clientY - rect.top;
+    });
+
+    // Update center point based on touch movement
+    header.addEventListener('touchmove', (event) => {
+      event.preventDefault(); // Prevent scrolling on touch
+      const touch = event.touches[0];
+      const rect = header.getBoundingClientRect();
+      centerX = touch.clientX - rect.left;
+      centerY = touch.clientY - rect.top;
+    });
 
     window.addEventListener('resize', () => {
       canvas.width = header.clientWidth;

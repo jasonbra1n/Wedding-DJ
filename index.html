@@ -319,6 +319,8 @@
     // Initialize center point randomly within 20% to 80% of header dimensions
     let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
     let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
+    let targetX = centerX;
+    let targetY = centerY;
 
     const lights = [];
     const ripples = [];
@@ -345,6 +347,10 @@
         size: Math.random() * 2 + 1, // 1-3px
         opacity: Math.random() * 0.6 + 0.2 // 0.2-0.8
       });
+    }
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
     }
 
     function animate() {
@@ -377,6 +383,17 @@
         ctx.globalAlpha = ripple.opacity;
         ctx.stroke();
       });
+
+      // Smoothly move center point toward target with limited speed
+      const dx = targetX - centerX;
+      const dy = targetY - centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const maxSpeed = 2; // Max pixels per frame
+      if (distance > 0) {
+        const speed = Math.min(maxSpeed, distance * 0.05); // Limit speed
+        centerX += (dx / distance) * speed;
+        centerY += (dy / distance) * speed;
+      }
 
       // Draw lights and trails
       lights.forEach(light => {
@@ -413,20 +430,20 @@
       requestAnimationFrame(animate);
     }
 
-    // Update center point based on cursor movement
+    // Update target point based on cursor movement
     header.addEventListener('mousemove', (event) => {
       const rect = header.getBoundingClientRect();
-      centerX = event.clientX - rect.left;
-      centerY = event.clientY - rect.top;
+      targetX = event.clientX - rect.left;
+      targetY = event.clientY - rect.top;
     });
 
-    // Update center point based on touch movement
+    // Update target point based on touch movement
     header.addEventListener('touchmove', (event) => {
       event.preventDefault();
       const touch = event.touches[0];
       const rect = header.getBoundingClientRect();
-      centerX = touch.clientX - rect.left;
-      centerY = touch.clientY - rect.top;
+      targetX = touch.clientX - rect.left;
+      targetY = touch.clientY - rect.top;
     });
 
     // Create ripple on click

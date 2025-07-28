@@ -363,10 +363,10 @@
         light.trail.push({ x, y });
         if (light.trail.length > 10) light.trail.shift(); // Keep only last 10 positions
 
-        // Draw trail
+        // Draw trail (brightest at newest point)
         for (let i = 0; i < light.trail.length; i++) {
           const pos = light.trail[i];
-          const trailOpacity = (light.trail.length - i) / light.trail.length * light.opacity;
+          const trailOpacity = i / (light.trail.length - 1) * light.opacity; // Brightest at newest
           ctx.beginPath();
           ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
           ctx.fillStyle = light.color;
@@ -413,7 +413,7 @@
         x: event.clientX - rect.left,
         y: event.clientY - rect.top,
         radius: 10,
-        opacity: 0.7 // Increased initial opacity
+        opacity: 0.7
       });
     });
 
@@ -426,7 +426,7 @@
         x: touch.clientX - rect.left,
         y: touch.clientY - rect.top,
         radius: 10,
-        opacity: 0.7 // Increased initial opacity
+        opacity: 0.7
       });
     });
 

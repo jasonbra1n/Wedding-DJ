@@ -89,7 +89,7 @@ Attribution appreciated but not required.
 
 ## 👋 Credits
 
-Created by [Jason Brain (ΙΑΣΩΝ)](https://jasonbrain.com{:target="_blank"})  
+Created by [Jason Brain (ΙΑΣΩΝ)](https://jasonbrain.com)  
 Feel free to reach out with feature ideas, or just say hi if you use this template!
 
 ---

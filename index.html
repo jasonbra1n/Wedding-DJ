@@ -152,7 +152,7 @@
       text-align: center;
     }
     .mix-player iframe {
-      width: 100%;
+      width: 80%;
       max-width: 500px;
       border: 2px solid #291259;
       border-radius: 10px;
@@ -184,6 +184,13 @@
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+    footer a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 768px) {
       header h1 {
@@ -251,11 +258,9 @@
     <section class="gallery">
       <h2>Past Events</h2>
       <hr>
-      <div class="gallery">
-        <img src="images/dj-setup.jpg" alt="DJ setup with RGB lights in Haliburton">
-        <img src="images/backyard-party.jpg" alt="Backyard wedding dance party in Minden">
-        <img src="images/barn-event.jpg" alt="Barn wedding with fog machine in Kawartha Lakes">
-      </div>
+      <img src="images/dj-setup.jpg" alt="DJ setup with RGB lights in Haliburton">
+      <img src="images/backyard-party.jpg" alt="Backyard wedding dance party in Minden">
+      <img src="images/barn-event.jpg" alt="Barn wedding with fog machine in Kawartha Lakes">
     </section>
     <section class="contact" id="contact">
       <h2>Contact Me</h2>
@@ -275,7 +280,7 @@
     canvas.height = window.innerHeight;
 
     const lights = [];
-    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00']; // RGB DMX colors
+    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
     for (let i = 0; i < 50; i++) {
       lights.push({
         x: Math.random() * canvas.width,
@@ -289,7 +294,7 @@
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)'; // Subtle fog effect
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       lights.forEach(light => {
         ctx.beginPath();

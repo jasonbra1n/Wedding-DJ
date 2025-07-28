@@ -328,7 +328,8 @@
         angle,
         color: colors[Math.floor(Math.random() * colors.length)],
         opacity: Math.random() * 0.5 + 0.3,
-        speed
+        speed,
+        trail: [] // Array to store trail positions
       });
     }
 
@@ -341,7 +342,21 @@
         light.angle += light.speed;
         const x = centerX + light.radius * Math.cos(light.angle);
         const y = centerY + light.radius * Math.sin(light.angle);
+        light.trail.push({ x, y });
+        if (light.trail.length > 10) light.trail.shift(); // Keep only last 10 positions
 
+        // Draw trail
+        for (let i = 0; i < light.trail.length; i++) {
+          const pos = light.trail[i];
+          const trailOpacity = (light.trail.length - i) / light.trail.length * light.opacity;
+          ctx.beginPath();
+          ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
+          ctx.fillStyle = light.color;
+          ctx.globalAlpha = trailOpacity;
+          ctx.fill();
+        }
+
+        // Draw the light itself
         ctx.beginPath();
         ctx.arc(x, y, 3, 0, Math.PI * 2);
         ctx.fillStyle = light.color;

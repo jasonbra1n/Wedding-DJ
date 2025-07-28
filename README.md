@@ -7,9 +7,7 @@ Originally created for **DJ Jason Brain (ΙΑΣΩΝ)**, serving Haliburton, Mind
 
 ---
 
-## 🎧 Live Demo
-
-[https://weddingdj.jasonbrain.com/](https://weddingdj.jasonbrain.com/)
+## <a href="https://weddingdj.jasonbrain.com/" target="_blank">🎧 Live Demo</a>
 
 ---
 

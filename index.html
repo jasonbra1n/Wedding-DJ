@@ -318,6 +318,7 @@
     let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
 
     const lights = [];
+    const ripples = [];
     const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
     for (let i = 0; i < 50; i++) {
       const radius = Math.random() * (header.clientHeight / 2);
@@ -338,6 +339,23 @@
       ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+      // Draw ripples
+      ripples.forEach((ripple, index) => {
+        ripple.radius += 2; // Expand ripple
+        ripple.opacity -= 0.01; // Fade ripple
+        if (ripple.opacity <= 0 || ripple.radius > header.clientHeight / 2) {
+          ripples.splice(index, 1); // Remove faded or oversized ripples
+          return;
+        }
+        ctx.beginPath();
+        ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(255, 255, 255, ' + ripple.opacity + ')';
+        ctx.lineWidth = 2;
+        ctx.globalAlpha = ripple.opacity;
+        ctx.stroke();
+      });
+
+      // Draw lights and trails
       lights.forEach(light => {
         light.angle += light.speed;
         const x = centerX + light.radius * Math.cos(light.angle);
@@ -386,6 +404,30 @@
       const rect = header.getBoundingClientRect();
       centerX = touch.clientX - rect.left;
       centerY = touch.clientY - rect.top;
+    });
+
+    // Create ripple on click
+    header.addEventListener('mousedown', (event) => {
+      const rect = header.getBoundingClientRect();
+      ripples.push({
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
+        radius: 10,
+        opacity: 0.5
+      });
+    });
+
+    // Create ripple on touch
+    header.addEventListener('touchstart', (event) => {
+      event.preventDefault(); // Prevent default touch behavior
+      const touch = event.touches[0];
+      const rect = header.getBoundingClientRect();
+      ripples.push({
+        x: touch.clientX - rect.left,
+        y: touch.clientY - rect.top,
+        radius: 10,
+        opacity: 0.5
+      });
     });
 
     window.addEventListener('resize', () => {

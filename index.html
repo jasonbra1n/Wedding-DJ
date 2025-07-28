@@ -371,8 +371,9 @@
       // Draw ripples
       ripples.forEach((ripple, index) => {
         ripple.radius += 2;
-        ripple.opacity -= 0.005;
-        if (ripple.opacity <= 0 || ripple.radius > header.clientHeight) {
+        ripple.opacity -= 0.002; // Slower fade
+        const maxRadius = Math.sqrt(header.clientWidth * header.clientWidth + header.clientHeight * header.clientHeight);
+        if (ripple.opacity <= 0 || ripple.radius > maxRadius) {
           ripples.splice(index, 1);
           return;
         }
@@ -453,7 +454,7 @@
         x: event.clientX - rect.left,
         y: event.clientY - rect.top,
         radius: 10,
-        opacity: 0.7
+        opacity: 1 // Start at full opacity as tested
       });
     });
 
@@ -466,7 +467,7 @@
         x: touch.clientX - rect.left,
         y: touch.clientY - rect.top,
         radius: 10,
-        opacity: 0.7
+        opacity: 1 // Start at full opacity as tested
       });
     });
 

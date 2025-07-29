@@ -4,6 +4,7 @@ document.getElementById('booking-year').textContent = new Date().getFullYear() +
 const canvas = document.querySelector('.lights');
 const ctx = canvas.getContext('2d');
 const header = document.querySelector('header');
+const ctaButton = document.querySelector('.cta-button');
 let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
 let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
 let targetX = centerX;
@@ -87,7 +88,7 @@ header.addEventListener('mousemove', (event) => {
 });
 
 header.addEventListener('touchmove', (event) => {
-  event.preventDefault();
+  // Do not prevent default to allow scrolling
   const touch = event.touches[0];
   const rect = header.getBoundingClientRect();
   targetX = touch.clientX - rect.left;
@@ -96,14 +97,24 @@ header.addEventListener('touchmove', (event) => {
 
 header.addEventListener('mousedown', (event) => {
   const rect = header.getBoundingClientRect();
-  ripples.push({ x: event.clientX - rect.left, y: event.clientY - rect.top, radius: 10, opacity: 1 });
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+  // Only trigger ripple if not clicking the button
+  if (!ctaButton.contains(event.target)) {
+    ripples.push({ x, y, radius: 10, opacity: 1 });
+  }
 });
 
 header.addEventListener('touchstart', (event) => {
-  event.preventDefault();
+  // Do not prevent default to allow button taps
   const touch = event.touches[0];
   const rect = header.getBoundingClientRect();
-  ripples.push({ x: touch.clientX - rect.left, y: touch.clientY - rect.top, radius: 10, opacity: 1 });
+  const x = touch.clientX - rect.left;
+  const y = touch.clientY - rect.top;
+  // Only trigger ripple if not tapping the button
+  if (!ctaButton.contains(event.target)) {
+    ripples.push({ x, y, radius: 10, opacity: 1 });
+  }
 });
 
 window.addEventListener('resize', () => {

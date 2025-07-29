@@ -3,657 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding DJ Haliburton, Minden & Kawartha Lakes | Jason Brain (ΙΑΣΩΝ)</title>
-  <meta name="description" content="Top Wedding DJ in Haliburton, Minden, and Kawartha Lakes, Ontario. Jason Brain (ΙΑΣΩΝ) offers RGB lights, fog machines, and custom playlists. Book now for 2026!">
-  <meta name="keywords" content="Wedding DJ Haliburton, Minden DJ, Kawartha Lakes wedding music, outdoor wedding DJ Ontario, wedding DJ services, custom wedding playlists, RGB DMX lights, fog machine rental">
-  <meta name="author" content="Jason Brain">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
-    header { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
-    .header-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://weddingdj.jasonbrain.com/images/mixer-board.jpg') no-repeat center/cover; background-attachment: fixed; z-index: -3; }
-    .header-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(3, 3, 130, 0.12) 0%, rgba(41, 18, 89, 0.76) 100%); z-index: -1; }
-    .lights { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; mix-blend-mode: overlay; }
-    .header-content { position: relative; z-index: 1; }
-    header h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
-    header p { font-size: 1.5rem; margin: 1rem 0; }
-    .cta-button { padding: 1rem 2rem; font-size: 1.2rem; background: #ff6f61; color: white; border: none; border-radius: 25px; cursor: pointer; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; pointer-events: auto; }
-    .cta-button::before { content: ''; position: absolute; top: 50%; left: 50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent); transform: translate(-50%, -50%) scale(0); transition: transform 0.5s ease; }
-    .cta-button:hover::before { transform: translate(-50%, -50%) scale(1); }
-    .cta-button:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 111, 97, 0.7); }
-    .container { max-width: 1200px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 20px; display: flex; flex-direction: column; gap: 3rem; }
-    .about, .venues, .gallery, .contact, .blog { text-align: center; }
-    h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #291259; padding: 0.5rem 0; width: 100%;}
-    hr { display: block; border: 0; height: 3px; background: linear-gradient(to right, #ff6f61, #8146ff); margin: 2rem auto; width: 100%; }
-    .venues { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .venue-card { background: #f9f1f1; border-radius: 10px; padding: 1rem; width: 200px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
-    .venue-card:hover { transform: translateY(-5px); }
-    .venue-card img { width: 100%; border-radius: 5px; border: 2px solid #291259; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .gallery img { width: 100%; max-width: 300px; border-radius: 10px; border: 2px solid #291259; transition: transform 0.3s ease; }
-    .gallery img:hover { transform: scale(1.05); }
-    .mix-player { margin: 2rem auto; text-align: center; }
-    .mix-player iframe { width: 100%; border: 2px solid #291259; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-    .mix-player p { margin-top: 1rem; }
-    .mix-player .mixcloud-link { color: #ff6f61; text-decoration: none; font-weight: bold; }
-    .mix-player .mixcloud-link:hover { text-decoration: underline; }
-    .scroll-to-top { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #ff6f61; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; z-index: 10; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0.8; }
-    .scroll-to-top:hover { opacity: 1; transform: scale(1.1); box-shadow: 0 0 10px rgba(255, 111, 97, 0.7); }
-    footer { background: #291259; color: white; text-align: center; padding: 1rem; }
-    footer a { color: #ff6f61; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      header p { font-size: 1rem; }
-      .container { padding: 1rem; gap: 2rem; }
-      h2 { font-size: 1.8rem; }
-      .venue-card { width: 150px; }
-      hr { width: 80%; }
-      .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
-    }
-    iframe[src*="google.com/maps"] {
-      transition: transform .25s ease, box-shadow .25s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,.15);
-    }
-    iframe[src*="google.com/maps"]:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,.25);
-    }
-    .contact iframe {
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      max-width: 300px;
-      margin: 0 auto;
-      display: block;
-    }
-    .contact-card {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      align-items: flex-start;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2.5rem;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
-    .contact-info {
-      flex: 1 1 220px;
-      text-align: left;
-      line-height: 1.6;
-    }
-    .contact-info p {
-      margin-bottom: 1rem;
-    }
-    .contact-info a {
-      color: #ff6f61;
-      font-weight: 600;
-    }
-    .contact-map {
-      flex: 0 0 300px;
-    }
-    .contact-cta {
-      margin-top: 2rem;
-      font-size: 1.1rem;
-    }
-    .extras {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-    }
-    @media (max-width: 600px) {
-      .contact-card {
-        padding: 1.5rem;
-      }
-    }
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Jason Brain Wedding DJ",
-      "image": "https://weddingdj.jasonbrain.com/images/dj-setup.jpg",
-      "telephone": "(123) 456-7890",
-      "email": "jason@weddingdj.jasonbrain.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Haliburton",
-        "addressRegion": "ON",
-        "postalCode": "K0M 1S0"
-      },
-      "url": "https://weddingdj.jasonbrain.com/",
-      "sameAs": [
-        "https://www.facebook.com/jasonbraindj",
-        "https://www.instagram.com/jasonbraindj"
-      ]
-    }
-  </script>
+  <title>Wedding DJ Services in Haliburton, Minden & Kawartha Lakes - Booking Now for 2025</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="header-background"></div>
-    <div class="header-gradient"></div>
-    <canvas class="lights"></canvas>
-    <div class="header-content">
-      <h1 id="header-title">Wedding DJ Services in Haliburton, Minden & Kawartha Lakes - Booking Now for <span id="booking-year"></span></h1>
-      <p>Premier Wedding DJ in Haliburton, Minden & Kawartha Lakes</p>
-      <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book Your Dance Party!</button>
-    </div>
+    <h1>Premier Wedding DJ in Haliburton, Minden & Kawartha Lakes</h1>
+    <a href="#contact">Book Your Dance Party!</a>
   </header>
-  <div class="container">
-    <section class="about">
-  <h2>Meet Jason Brain (ΙΑΣΩΝ) - Your Wedding Day Music Curator</h2>
-  
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin: 2rem 0;">
-    <div style="flex: 1; min-width: 300px;">
-      <img src="https://weddingdj.jasonbrain.com/images/jason.jpg" alt="Jason Brain - Professional Wedding DJ in action at an elegant tent wedding" 
-           style="width: 100%; max-width: 400px; border-radius: 15px; border: 3px solid #291259; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
-    </div>
-    <div style="flex: 2; min-width: 300px; text-align: left;">
-      <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 1.5rem; color: #444;">
-        <strong>I don't just play music – I craft experiences that become lifelong memories.</strong>
-      </p>
-      
-      <p style="margin-bottom: 1rem;">
-        With over 30 years behind the decks, I've evolved from the legendary days of closing Lindsay's York Tavern to becoming Haliburton's most trusted wedding DJ. I've read thousands of crowds, from packed nightclub floors to intimate backyard celebrations.
-      </p>
-      
-      <p style="margin-bottom: 1rem;">
-        My approach is simple: <em>Every wedding deserves a soundtrack as unique as your love story.</em> I work closely with each couple to understand your vision, your must-plays, your absolutely-nots, and the moments that matter most to you.
-      </p>
-      
-      <div style="background: #f8f4ff; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #8146ff; margin: 1.5rem 0;">
-        <h4 style="color: #291259; margin-bottom: 0.5rem;">Why Couples Choose Jason Brain:</h4>
-        <ul style="text-align: left; margin-left: 1rem; line-height: 1.8;">
-          <li><strong>Intuitive Crowd Reading:</strong> 30+ years of knowing exactly what song comes next</li>
-          <li><strong>Premium Equipment:</strong> Professional sound system, RGB DMX lighting, fog effects</li>
-          <li><strong>Seamless Execution:</strong> Your day flows perfectly while you focus on each other</li>
-          <li><strong>Local Legend Status:</strong> Trusted by Haliburton High School for 3 consecutive proms</li>
-          <li><strong>Any Genre, Any Era:</strong> From 1950s classics to today's hits – I speak all musical languages</li>
-        </ul>
-      </div>
-      
-      <p style="font-style: italic; color: #666; border-top: 2px solid #eee; padding-top: 1rem; margin-top: 1.5rem;">
-        "I've closed legendary venues and opened countless dance floors. Now, I'm here to make your wedding day legendary too."
-      </p>
-    </div>
-  </div>
 
-  <div style="background: linear-gradient(135deg, #291259, #8146ff); color: white; padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0;">
-    <h3 style="color: white; margin-bottom: 1rem;">Investment in Your Perfect Day</h3>
-    <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-      Professional wedding DJ services starting at <strong>$2000</strong>
-    </p>
-    <p style="font-size: 0.9rem; opacity: 0.9;">
-      Because your wedding deserves more than just a playlist on shuffle.<br>
-      This includes premium sound system, lighting, fog effects, and my personal attention to every detail.
-    </p>
-  </div>
+  <section id="about">
+    <h2>Meet Jason Brain (ΙΑΣΩΝ) - Your Wedding Day Music Curator</h2>
+    <p>I don't just play music – I craft experiences that become lifelong memories.</p>
+    <p>With over 30 years behind the decks, I've evolved from the legendary days of closing Lindsay's York Tavern to becoming Haliburton's most trusted wedding DJ. I've read thousands of crowds, from packed nightclub floors to intimate backyard celebrations.</p>
+    <p>My approach is simple: Every wedding deserves a soundtrack as unique as your love story. I work closely with each couple to understand your vision, your must-plays, your absolutely-nots, and the moments that matter most to you.</p>
+    <h3>Why Couples Choose Jason Brain:</h3>
+    <ul>
+      <li>Intuitive Crowd Reading: 30+ years of knowing exactly what song comes next</li>
+      <li>Premium Equipment: Professional sound system, RGB DMX lighting, fog effects</li>
+      <li>Seamless Execution: Your day flows perfectly while you focus on each other</li>
+      <li>Local Legend Status: Trusted by Haliburton High School for 3 consecutive proms</li>
+      <li>Any Genre, Any Era: From 1950s classics to today's hits – I speak all musical languages</li>
+    </ul>
+    <p>"I've closed legendary venues and opened countless dance floors. Now, I'm here to make your wedding day legendary too."</p>
+  </section>
 
-  <div class="mix-player">
-    <h3>Sample Mix: ΙΑΣΩΝ - 4x4.2: Heirloom</h3>
-    <iframe scrolling="no" style="border-radius: 10px;" id="hearthis_at_track_11056567" width="100%" height="150" src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/iason/4x42/" target="_blank">ΙΑΣΩΝ - 4x4.2: Heirloom - April 2024</a> <span>by</span><a href="https://hearthis.at/iason/" target="_blank">Jason Brain | ΙΑΣΩΝ</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
-    <p>A taste of my melodic house style – perfect for cocktail hour or late-night vibes. <br>
-    <a href="https://www.mixcloud.com/jasonbra1n/%CE%B9%CE%B1%CF%83%CF%89%CE%BD-4x42-heirloom-mixed-april-2024/" target="_blank" class="mixcloud-link">Also available on Mixcloud</a></p>
-  </div>
-</section>
-<!-- Add this section after your about section -->
-<section class="packages" style="margin: 3rem 0;">
-  <h2>Wedding DJ Packages - Haliburton & Kawartha Lakes</h2>
-  <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #666; max-width: 800px; margin-left: auto; margin-right: auto;">
-    Three decades of experience curating unforgettable celebrations. Each package includes my personal attention to detail and professional-grade equipment.
-  </p>
+  <section id="pricing">
+    <h2>Investment in Your Perfect Day</h2>
+    <p>Professional wedding DJ services starting at $2000</p>
+    <p>Because your wedding deserves more than just a playlist on shuffle.</p>
+    <p>This includes premium sound system, lighting, fog effects, and my personal attention to every detail.</p>
+  </section>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 2rem 0;">
-    
-    <!-- Essential Package -->
-    <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 8px 24px rgba(0,0,0,0.1); border: 2px solid #f0f0f0; position: relative;">
-      <div style="background: #8146ff; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: bold;">
-        ESSENTIAL
-      </div>
-      <h3 style="color: #291259; margin-bottom: 1rem; font-size: 1.8rem;">The Foundation</h3>
-      <div style="font-size: 2rem; font-weight: bold; color: #291259; margin-bottom: 1rem;">$2,000</div>
-      <p style="color: #666; margin-bottom: 1.5rem; font-size: 0.95rem;">Perfect for intimate celebrations up to 100 guests</p>
-      
-      <ul style="text-align: left; list-style: none; padding: 0; margin-bottom: 2rem;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Professional sound system (up to 100 guests)
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Wireless microphones for speeches
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Custom playlist consultation
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Basic lighting setup
-        </li>
-        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          6 hours of celebration coverage
-        </li>
+  <section id="sample-mix">
+    <h2>Sample Mix: ΙΑΣΩΝ - 4x4.2: Heirloom</h2>
+    <p><a href="https://hearthis.at/jason-brain/4x4-2-heirloom-april-2024">Listen to ΙΑΣΩΝ - 4x4.2: Heirloom - April 2024 by Jason Brain | ΙΑΣΩΝ on hearthis.at</a></p>
+    <p>A taste of my melodic house style – perfect for cocktail hour or late-night vibes.</p>
+    <p>Also available on <a href="https://mixcloud.com/jasonbrain">Mixcloud</a></p>
+  </section>
+
+  <section id="packages">
+    <h2>Wedding DJ Packages - Haliburton & Kawartha Lakes</h2>
+    <p>Three decades of experience curating unforgettable celebrations. Each package includes my personal attention to detail and professional-grade equipment.</p>
+    <div class="package">
+      <h3>ESSENTIAL</h3>
+      <p>The Foundation</p>
+      <p>$2,000</p>
+      <p>Perfect for intimate celebrations up to 100 guests</p>
+      <ul>
+        <li>Professional sound system (up to 100 guests)</li>
+        <li>Wireless microphones for speeches</li>
+        <li>Custom playlist consultation</li>
+        <li>Basic lighting setup</li>
+        <li>6 hours of celebration coverage</li>
       </ul>
     </div>
-
-    <!-- Premium Package -->
-    <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 12px 32px rgba(0,0,0,0.15); border: 3px solid #8146ff; position: relative; transform: scale(1.05);">
-      <div style="background: linear-gradient(135deg, #ff6f61, #8146ff); color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: bold;">
-        MOST POPULAR
-      </div>
-      <h3 style="color: #291259; margin-bottom: 1rem; font-size: 1.8rem;">The Complete Experience</h3>
-      <div style="font-size: 2rem; font-weight: bold; color: #291259; margin-bottom: 1rem;">$2,800</div>
-      <p style="color: #666; margin-bottom: 1.5rem; font-size: 0.95rem;">Everything you need for the perfect celebration</p>
-      
-      <ul style="text-align: left; list-style: none; padding: 0; margin-bottom: 2rem;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          <strong>Everything in Essential, plus:</strong>
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          RGB DMX lighting system
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Professional fog machine
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Enhanced sound system (up to 200 guests)
-        </li>
-        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          8 hours of celebration coverage
-        </li>
+    <div class="package">
+      <h3>MOST POPULAR</h3>
+      <p>The Complete Experience</p>
+      <p>$2,800</p>
+      <p>Everything you need for the perfect celebration</p>
+      <ul>
+        <li>Everything in Essential, plus:</li>
+        <li>RGB DMX lighting system</li>
+        <li>Professional fog machine</li>
+        <li>Enhanced sound system (up to 200 guests)</li>
+        <li>8 hours of celebration coverage</li>
       </ul>
     </div>
-
-    <!-- Luxury Package -->
-    <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 8px 24px rgba(0,0,0,0.1); border: 2px solid #f0f0f0; position: relative;">
-      <div style="background: #291259; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: bold;">
-        LUXURY
-      </div>
-      <h3 style="color: #291259; margin-bottom: 1rem; font-size: 1.8rem;">The Legendary Experience</h3>
-      <div style="font-size: 2rem; font-weight: bold; color: #291259; margin-bottom: 1rem;">$3,500</div>
-      <p style="color: #666; margin-bottom: 1.5rem; font-size: 0.95rem;">When only the absolute best will do</p>
-      
-      <ul style="text-align: left; list-style: none; padding: 0; margin-bottom: 2rem;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          <strong>Everything in Complete, plus:</strong>
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Premium sound system (unlimited guests)
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Multiple lighting zones
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Cocktail hour background music
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          Ceremony sound system
-        </li>
-        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
-          <span style="color: #8146ff; margin-right: 0.5rem; font-weight: bold;">✓</span>
-          10 hours of complete coverage
-        </li>
+    <div class="package">
+      <h3>LUXURY</h3>
+      <p>The Legendary Experience</p>
+      <p>$3,500</p>
+      <p>When only the absolute best will do</p>
+      <ul>
+        <li>Everything in Complete, plus:</li>
+        <li>Premium sound system (unlimited guests)</li>
+        <li>Multiple lighting zones</li>
+        <li>Cocktail hour background music</li>
+        <li>Ceremony sound system</li>
+        <li>10 hours of complete coverage</li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <div style="background: #f8f4ff; padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0; border-left: 4px solid #8146ff;">
-    <h4 style="color: #291259; margin-bottom: 1rem;">Trusted by Local Venues & Vendors</h4>
-    <p style="margin-bottom: 1rem; color: #666;">
-      "Working with professional vendors who know my style? That's the secret to seamless celebrations. 
-      I've built relationships with the best caterers, venues, and photographers in the region."
-    </p>
-    <p style="font-size: 0.9rem; color: #888; font-style: italic;">
-      Preferred DJ for Haliburton Highlands Secondary School Proms • Recommended by local wedding vendors
-    </p>
-  </div>
+  <section id="vendors">
+    <h2>Trusted by Local Venues & Vendors</h2>
+    <p>"Working with professional vendors who know my style? That's the secret to seamless celebrations. I've built relationships with the best caterers, venues, and photographers in the region."</p>
+    <p>Preferred DJ for Haliburton Highlands Secondary School Proms • Recommended by local wedding vendors</p>
+    <p>All packages include: Pre-event consultation, custom playlist creation, professional setup/breakdown, and my 30+ years of experience reading crowds and keeping dance floors packed.</p>
+    <p>Travel included within 30 minutes of Haliburton. Longer distances may require additional travel fee.</p>
+  </section>
 
-  <div style="text-align: center; margin: 2rem 0;">
-    <p style="font-size: 1.1rem; margin-bottom: 1rem; color: #333;">
-      <strong>All packages include:</strong> Pre-event consultation, custom playlist creation, professional setup/breakdown, 
-      and my 30+ years of experience reading crowds and keeping dance floors packed.
-    </p>
-    <p style="font-size: 0.95rem; color: #666;">
-      <em>Travel included within 30 minutes of Haliburton. Longer distances may require additional travel fee.</em>
-    </p>
-  </div>
-</section>
-<!-- Add this section after your packages section -->
-<section class="visual-production" style="margin: 4rem 0; background: linear-gradient(135deg, #1a0033, #330066); color: white; padding: 3rem 2rem; border-radius: 20px; position: relative; overflow: hidden;">
-  
-  <!-- Background pattern overlay -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px); opacity: 0.3; z-index: 1;"></div>
-  
-  <div style="position: relative; z-index: 2;">
-    <h2 style="color: white; text-align: center; font-size: 2.8rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-      Visual Production & Projection Mapping
-    </h2>
-    <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Beyond sound - creating immersive visual experiences that transform any space into something extraordinary
-    </p>
+  <section id="visuals">
+    <h2>Visual Production & Projection Mapping</h2>
+    <p>Beyond sound - creating immersive visual experiences that transform any space into something extraordinary</p>
+    <img src="toronto-2022.jpg" alt="Toronto 2022 • DJ Vegas Brasil">
+    <h3>Professional Projection Mapping</h3>
+    <p>What This Means for Your Wedding:</p>
+    <ul>
+      <li>Professional Music Videos: Extensive collection from XtendaMix & 10+ years of ZIPDJ membership</li>
+      <li>Space Transformation: Turn any venue into an immersive environment with mapped visuals</li>
+      <li>Music-Synchronized: Visuals that pulse, flow, and dance with your soundtrack</li>
+      <li>Glow Party Elements: UV/blacklight system transforms white clothing into glowing effects - or go wild with neon body paint!</li>
+      <li>Professional Software: Resolume Arena - the same tech used by world-class artists</li>
+    </ul>
+    <p>"I've provided visual production for international DJs in Toronto and created projection mapping experiences that guests talk about for years. This isn't just lighting - it's artistic transformation of your celebration space."</p>
+    <h3>Professional Equipment & Capabilities</h3>
+    <ul>
+      <li>Projection Mapping: Custom geometric projection beyond standard rectangles</li>
+      <li>Resolume Arena: Professional VJ software used by touring artists</li>
+      <li>UV/Blacklight System: 4ft ADJ Eco Bars + LED floods for glow party effects</li>
+      <li>Professional Projectors: Optoma 4500 lumen laser projector + access to higher-power rentals</li>
+      <li>Professional Video Library: XtendaMix music video pool & 10+ years ZIPDJ collection</li>
+    </ul>
+    <h3>Visual Production Add-On</h3>
+    <p>+$1,500</p>
+    <p>Available with any package. Includes custom content creation, projection mapping setup, and synchronized visual performance.</p>
+    <p>*Venue assessment required to determine optimal projection surfaces and setup</p>
+  </section>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin: 3rem 0;">
-      
-      <!-- Image Section -->
-      <div style="position: relative;">
-        <img src="https://weddingdj.jasonbrain.com/images/vegas-br.jpg" 
-             alt="Jason Brain's projection mapping and visual production setup for DJ Vegas from Brasil in Toronto"
-             style="width: 100%; border-radius: 15px; box-shadow: 0 12px 32px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2);">
-        <div style="position: absolute; bottom: -10px; right: -10px; background: rgba(255,111,97,0.9); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold; backdrop-filter: blur(10px);">
-          Toronto 2022 • DJ Vegas Brasil
-        </div>
-      </div>
+  <section id="venues">
+    <h2>Versatile Venues for Wedding DJs in Ontario</h2>
+    <ul>
+      <li>Party Tents</li>
+      <li>Backyards</li>
+      <li>Barns</li>
+      <li>Halls</li>
+    </ul>
+  </section>
 
-      <!-- Content Section -->
-      <div>
-        <h3 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1.5rem;">
-          Professional Projection Mapping
-        </h3>
-        
-        <div style="margin-bottom: 2rem;">
-          <h4 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">What This Means for Your Wedding:</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
-              <span style="color: #00ffff; margin-right: 0.8rem; font-weight: bold; margin-top: 0.1rem;">◆</span>
-              <div>
-                <strong>Professional Music Videos:</strong> Extensive collection from XtendaMix & 10+ years of ZIPDJ membership
-              </div>
-            </li>
-            <li style="padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
-              <span style="color: #00ffff; margin-right: 0.8rem; font-weight: bold; margin-top: 0.1rem;">◆</span>
-              <div>
-                <strong>Space Transformation:</strong> Turn any venue into an immersive environment with mapped visuals
-              </div>
-            </li>
-            <li style="padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
-              <span style="color: #00ffff; margin-right: 0.8rem; font-weight: bold; margin-top: 0.1rem;">◆</span>
-              <div>
-                <strong>Music-Synchronized:</strong> Visuals that pulse, flow, and dance with your soundtrack
-              </div>
-            </li>
-            <li style="padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start;">
-              <span style="color: #00ffff; margin-right: 0.8rem; font-weight: bold; margin-top: 0.1rem;">◆</span>
-              <div>
-                <strong>Glow Party Elements:</strong> UV/blacklight system transforms white clothing into glowing effects - or go wild with neon body paint!
-              </div>
-            </li>
-            <li style="padding: 0.7rem 0; display: flex; align-items: flex-start;">
-              <span style="color: #00ffff; margin-right: 0.8rem; font-weight: bold; margin-top: 0.1rem;">◆</span>
-              <div>
-                <strong>Professional Software:</strong> Resolume Arena - the same tech used by world-class artists
-              </div>
-            </li>
-          </ul>
-        </div>
+  <section id="past-events">
+    <h2>Past Events with Wedding DJ Services</h2>
+    <!-- Add event images or descriptions here -->
+  </section>
 
-        <div style="background: rgba(0,255,255,0.1); padding: 1.5rem; border-radius: 10px; border-left: 4px solid #00ffff;">
-          <p style="margin: 0; font-style: italic; line-height: 1.6;">
-            "I've provided visual production for international DJs in Toronto and created projection mapping experiences 
-            that guests talk about for years. This isn't just lighting - it's artistic transformation of your celebration space."
-          </p>
-        </div>
-      </div>
-    </div>
+  <section id="contact">
+    <h2>Book Your Wedding DJ in Haliburton, Ontario</h2>
+    <p>Address: Haliburton, Ontario (serving Minden & Kawartha Lakes)</p>
+    <p>Email: <a href="mailto:jason@weddingdj.jasonbrain.com">jason@weddingdj.jasonbrain.com</a></p>
+    <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+    <p>Ready to book your wedding DJ in Haliburton or Kawartha Lakes? Contact me today!</p>
+    <p>Also offering Photo Booth services for your event!</p>
+  </section>
 
-    <!-- Technical Specs -->
-    <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px; margin: 3rem 0; backdrop-filter: blur(10px);">
-      <h4 style="color: white; text-align: center; margin-bottom: 1.5rem; font-size: 1.4rem;">
-        Professional Equipment & Capabilities
-      </h4>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; text-align: center;">
-        <div>
-          <div style="color: #00ffff; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Projection Mapping</div>
-          <div style="font-size: 0.9rem; opacity: 0.8;">Custom geometric projection beyond standard rectangles</div>
-        </div>
-        <div>
-          <div style="color: #00ffff; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Resolume Arena</div>
-          <div style="font-size: 0.9rem; opacity: 0.8;">Professional VJ software used by touring artists</div>
-        </div>
-        <div>
-          <div style="color: #00ffff; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">UV/Blacklight System</div>
-          <div style="font-size: 0.9rem; opacity: 0.8;">4ft ADJ Eco Bars + LED floods for glow party effects</div>
-        </div>
-        <div>
-          <div style="color: #00ffff; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Professional Projectors</div>
-          <div style="font-size: 0.9rem; opacity: 0.8;">Optoma 4500 lumen laser projector + access to higher-power rentals</div>
-        </div>
-        <div>
-          <div style="color: #00ffff; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Professional Video Library</div>
-          <div style="font-size: 0.9rem; opacity: 0.8;">XtendaMix music video pool & 10+ years ZIPDJ collection</div>
-        </div>
-      </div>
-    </div>
+  <section id="faq">
+    <h2>Wedding DJ Tips for Haliburton & Kawartha Lakes</h2>
+    <h3>Frequently Asked Questions</h3>
+    <h4>What Should I Look for in a Wedding DJ in Haliburton?</h4>
+    <p>Choosing a wedding DJ in Haliburton or Minden involves evaluating experience, equipment (like RGB DMX lights), and playlist customization. Jason Brain (ΙΑΣΩΝ) offers over 30 years of expertise to ensure your outdoor wedding in Kawartha Lakes is a hit.</p>
+    <h4>Which Are the Best Wedding Venues in the Area?</h4>
+    <p>Top venues include Sir Sams Ski Resort, Boshkung Smokehouse, Sandy Lane Resort, and Pinestone Resort for stunning settings. For hall options, consider The Royal Canadian Legion Branch 129 in Haliburton or the hall at the A.J. LaRue Community Centre. A skilled wedding DJ can elevate any of these spaces with custom sound systems.</p>
+    <h4>How Can I Customize My Wedding Music?</h4>
+    <p>Work closely with your DJ to create custom wedding playlists tailored to your tastes. Jason Brain (ΙΑΣΩΝ) incorporates music videos and visuals, enhancing the experience at venues like barns or party tents in Haliburton and Kawartha Lakes.</p>
+  </section>
 
-    <!-- Pricing Addition -->
-    <div style="text-align: center; background: rgba(255,111,97,0.1); padding: 2rem; border-radius: 15px; border: 2px solid rgba(255,111,97,0.3);">
-      <h4 style="color: white; margin-bottom: 1rem; font-size: 1.3rem;">Visual Production Add-On</h4>
-      <div style="font-size: 2rem; font-weight: bold; color: #ff6f61; margin-bottom: 1rem;">+$1,500</div>
-      <p style="margin-bottom: 1.5rem; opacity: 0.9;">
-        Available with any package. Includes custom content creation, projection mapping setup, and synchronized visual performance.
-      </p>
-      <p style="font-size: 0.9rem; opacity: 0.7; font-style: italic;">
-        *Venue assessment required to determine optimal projection surfaces and setup
-      </p>
-    </div>
-  </div>
-</section>
-
-<style>
-@media (max-width: 768px) {
-  .visual-production div[style*="grid-template-columns: 1fr 1fr"] {
-    display: block !important;
-  }
-  .visual-production div[style*="grid-template-columns: 1fr 1fr"] > div:first-child {
-    margin-bottom: 2rem;
-  }
-}
-</style>
-    <section class="venues">
-      <h2>Versatile Venues for Wedding DJs in Ontario</h2>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/party-tent.jpg" alt="Party tent wedding setup with DJ in Haliburton, Ontario" loading="lazy">
-        <p>Party Tents</p>
-      </div>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/backyard.jpg" alt="Backyard wedding setup with DJ in Minden, Ontario" loading="lazy">
-        <p>Backyards</p>
-      </div>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/barn.jpg" alt="Barn wedding setup with DJ in Kawartha Lakes, Ontario" loading="lazy">
-        <p>Barns</p>
-      </div>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/hall.jpg" alt="Hall wedding setup with DJ in Peterborough, Ontario" loading="lazy">
-        <p>Halls</p>
-      </div>
-    </section>
-     <hr>
-    <section class="gallery">
-      <h2>Past Events with Wedding DJ Services</h2>
-     
-      <img src="https://weddingdj.jasonbrain.com/images/dj-setup.jpg" alt="Wedding DJ setup with RGB lights in Haliburton, Ontario" loading="lazy">
-      <img src="https://weddingdj.jasonbrain.com/images/backyard-party.jpg" alt="Backyard wedding dance party with DJ in Minden, Ontario" loading="lazy">
-      <img src="https://weddingdj.jasonbrain.com/images/barn-event.jpg" alt="Barn wedding with fog machine and DJ in Kawartha Lakes, Ontario" loading="lazy">
-    </section>
-     <hr>
-    <section class="contact" id="contact">
-      <h2>Book Your Wedding DJ in Haliburton, Ontario</h2>
-      <div class="contact-card">
-        <div class="contact-info">
-          <p><strong>Address</strong><br>Haliburton, Ontario<br><small>(serving Minden & Kawartha Lakes)</small></p>
-          <p><strong>Email</strong><br><a href="mailto:jason@weddingdj.jasonbrain.com">jason@weddingdj.jasonbrain.com</a></p>
-          <p><strong>Phone</strong><br><a href="tel:+11234567890">(123) 456-7890</a></p>
-        </div>
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184000.0000000001!2d-78.7!3d44.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd5bdfd63c1a0f1%3A0x7a10b4e6b9e1b7e1!2sHaliburton%2C%20ON!5e0!3m2!1sen!2sca!4v9999999999999!5m2!1sen!2sca" width="100%" height="300" style="border:0;border-radius:20px;aspect-ratio:1/1;max-width:300px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      <p class="contact-cta">Ready to book your wedding DJ in Haliburton or Kawartha Lakes?<br><strong>Contact me today!</strong></p>
-      <p class="extras">Also offering <a href="https://jasonbrain.com/services/photo-booth/">Photo Booth services</a> for your event!</p>
-    </section>
-     <hr>
-    <section class="blog">
-      <h2>Wedding DJ Tips for Haliburton & Kawartha Lakes</h2>
-      <h3>Frequently Asked Questions</h3>
-      <article>
-        <h4>What Should I Look for in a Wedding DJ in Haliburton?</h4>
-        <p>Choosing a wedding DJ in Haliburton or Minden involves evaluating experience, equipment (like RGB DMX lights), and playlist customization. Jason Brain (ΙΑΣΩΝ) offers over 30 years of expertise to ensure your outdoor wedding in Kawartha Lakes is a hit.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>Which Are the Best Wedding Venues in the Area?</h4>
-        <p>Top venues include <a href="https://www.sirsams.ca" target="_blank">Sir Sams Ski Resort</a>, <a href="https://www.boshkungsmokehouse.com" target="_blank">Boshkung Smokehouse</a>, <a href="https://www.sandylaneresort.com" target="_blank">Sandy Lane Resort</a>, and <a href="https://pinestone-resort.com" target="_blank">Pinestone Resort</a> for stunning settings. For hall options, consider <a href="https://www.haliburtonlegion.com/facility-rentals" target="_blank">The Royal Canadian Legion Branch 129 in Haliburton</a> or the hall at the <a href="https://www.dysartetal.ca/en/explore-and-play/aj-larue-community-centre.aspx" target="_blank">A.J. LaRue Community Centre</a>. A skilled wedding DJ can elevate any of these spaces with custom sound systems.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>How Can I Customize My Wedding Music?</h4>
-        <p>Work closely with your DJ to create custom wedding playlists tailored to your tastes. Jason Brain (ΙΑΣΩΝ) incorporates music videos and visuals, enhancing the experience at venues like barns or party tents in Haliburton and Kawartha Lakes.</p>
-        <br><br>
-      </article>
-    </section>
-  </div>
   <footer>
-    <p>© 2025 Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario | <a href="https://jasonbrain.com">More Services</a></p>
+    <p>© 2025 Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario | <a href="#more-services">More Services</a></p>
+    <a href="#top">↑</a>
   </footer>
-  <button class="scroll-to-top">↑</button>
-  <script>
-    // Set dynamic booking year
-    document.getElementById('booking-year').textContent = new Date().getFullYear() + 1;
 
-    const canvas = document.querySelector('.lights');
-    const ctx = canvas.getContext('2d');
-    const header = document.querySelector('header');
-    let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
-    let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
-    let targetX = centerX;
-    let targetY = centerY;
-
-    const lights = [];
-    const ripples = [];
-    const stars = [];
-    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
-    for (let i = 0; i < 50; i++) {
-      const radius = Math.random() * header.clientWidth;
-      const angle = Math.random() * Math.PI * 2;
-      const speed = (Math.random() * 0.002 + 0.001) * (Math.random() < 0.5 ? 1 : -1);
-      lights.push({ radius, angle, color: colors[Math.floor(Math.random() * colors.length)], opacity: Math.random() * 0.5 + 0.3, speed, trail: [] });
-    }
-    for (let i = 0; i < 100; i++) {
-      stars.push({ x: Math.random() * header.clientWidth, y: Math.random() * header.clientHeight, size: Math.random() * 2 + 1, opacity: Math.random() * 0.6 + 0.2 });
-    }
-
-    function lerp(a, b, t) { return a + (b - a) * t; }
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      stars.forEach(star => {
-        const twinkle = (Math.sin(Date.now() * 0.001 + star.x + star.y) + 1) / 2;
-        const starOpacity = star.opacity * twinkle;
-        ctx.beginPath(); ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, ' + starOpacity + ')'; ctx.fill();
-      });
-
-      ripples.forEach((ripple, index) => {
-        ripple.radius += 2;
-        ripple.opacity -= 0.002;
-        const maxRadius = Math.sqrt(header.clientWidth * header.clientWidth + header.clientHeight * header.clientHeight);
-        if (ripple.opacity <= 0 || ripple.radius > maxRadius) { ripples.splice(index, 1); return; }
-        ctx.beginPath(); ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = 'rgba(255, 255, 255, ' + ripple.opacity + ')'; ctx.lineWidth = 2;
-        ctx.globalAlpha = ripple.opacity; ctx.stroke();
-      });
-
-      const dx = targetX - centerX;
-      const dy = targetY - centerY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      const maxSpeed = 2;
-      if (distance > 0) {
-        const speed = Math.min(maxSpeed, distance * 0.05);
-        centerX += (dx / distance) * speed;
-        centerY += (dy / distance) * speed;
-      }
-
-      lights.forEach(light => {
-        light.angle += light.speed;
-        const x = centerX + light.radius * Math.cos(light.angle);
-        const y = centerY + light.radius * Math.sin(light.angle);
-        light.trail.push({ x, y }); if (light.trail.length > 10) light.trail.shift();
-
-        for (let i = 0; i < light.trail.length; i++) {
-          const pos = light.trail[i];
-          const trailOpacity = i / (light.trail.length - 1) * light.opacity;
-          ctx.beginPath(); ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
-          ctx.fillStyle = light.color; ctx.globalAlpha = trailOpacity; ctx.fill();
-        }
-
-        ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = light.color; ctx.globalAlpha = light.opacity; ctx.fill();
-        light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
-        if (light.opacity < 0.3) light.opacity = 0.3; if (light.opacity > 0.8) light.opacity = 0.8;
-      });
-
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(animate);
-    }
-
-    header.addEventListener('mousemove', (event) => {
-      const rect = header.getBoundingClientRect();
-      targetX = event.clientX - rect.left;
-      targetY = event.clientY - rect.top;
-    });
-
-    header.addEventListener('touchmove', (event) => {
-      event.preventDefault();
-      const touch = event.touches[0];
-      const rect = header.getBoundingClientRect();
-      targetX = touch.clientX - rect.left;
-      targetY = touch.clientY - rect.top;
-    });
-
-    header.addEventListener('mousedown', (event) => {
-      const rect = header.getBoundingClientRect();
-      ripples.push({ x: event.clientX - rect.left, y: event.clientY - rect.top, radius: 10, opacity: 1 });
-    });
-
-    header.addEventListener('touchstart', (event) => {
-      event.preventDefault();
-      const touch = event.touches[0];
-      const rect = header.getBoundingClientRect();
-      ripples.push({ x: touch.clientX - rect.left, y: touch.clientY - rect.top, radius: 10, opacity: 1 });
-    });
-
-    window.addEventListener('resize', () => {
-      canvas.width = header.clientWidth;
-      canvas.height = header.clientHeight;
-    });
-
-    canvas.width = header.clientWidth;
-    canvas.height = header.clientHeight;
-    animate();
-
-    const scrollToTopBtn = document.querySelector('.scroll-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) scrollToTopBtn.style.display = 'block';
-      else scrollToTopBtn.style.display = 'none';
-    });
-    scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

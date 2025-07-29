@@ -1,0 +1,105 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
+header { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
+.header-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://weddingdj.jasonbrain.com/images/mixer-board.jpg') no-repeat center/cover; background-attachment: fixed; z-index: -3; }
+.header-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(3, 3, 130, 0.12) 0%, rgba(41, 18, 89, 0.76) 100%); z-index: -1; }
+.lights { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; mix-blend-mode: overlay; }
+.header-content { position: relative; z-index: 1; }
+header h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+header p { font-size: 1.5rem; margin: 1rem 0; }
+.cta-button { padding: 1rem 2rem; font-size: 1.2rem; background: #ff6f61; color: white; border: none; border-radius: 25px; cursor: pointer; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; pointer-events: auto; }
+.cta-button::before { content: ''; position: absolute; top: 50%; left: 50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent); transform: translate(-50%, -50%) scale(0); transition: transform 0.5s ease; }
+.cta-button:hover::before { transform: translate(-50%, -50%) scale(1); }
+.cta-button:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 111, 97, 0.7); }
+.container { max-width: 1200px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 20px; display: flex; flex-direction: column; gap: 3rem; }
+.about, .venues, .gallery, .contact, .blog { text-align: center; }
+h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #291259; padding: 0.5rem 0; width: 100%; }
+hr { display: block; border: 0; height: 3px; background: linear-gradient(to right, #ff6f61, #8146ff); margin: 2rem auto; width: 100%; }
+.venues { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.venue-card { background: #f9f1f1; border-radius: 10px; padding: 1rem; width: 200px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+.venue-card:hover { transform: translateY(-5px); }
+.venue-card img { width: 100%; border-radius: 5px; border: 2px solid #291259; }
+.gallery { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.gallery img { width: 100%; max-width: 300px; border-radius: 10px; border: 2px solid #291259; transition: transform 0.3s ease; }
+.gallery img:hover { transform: scale(1.05); }
+.mix-player { margin: 2rem auto; text-align: center; }
+.mix-player iframe { width: 100%; border: 2px solid #291259; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+.mix-player p { margin-top: 1rem; }
+.mix-player .mixcloud-link { color: #ff6f61; text-decoration: none; font-weight: bold; }
+.mix-player .mixcloud-link:hover { text-decoration: underline; }
+.scroll-to-top { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #ff6f61; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; z-index: 10; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0.8; }
+.scroll-to-top:hover { opacity: 1; transform: scale(1.1); box-shadow: 0 0 10px rgba(255, 111, 97, 0.7); }
+footer { background: #291259; color: white; text-align: center; padding: 1rem; }
+footer a { color: #ff6f61; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  .container { padding: 1rem; gap: 2rem; }
+  h2 { font-size: 1.8rem; }
+  .venue-card { width: 150px; }
+  hr { width: 80%; }
+  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
+  .visual-production div[style*="grid-template-columns: 1fr 1fr"] {
+    display: block !important;
+  }
+  .visual-production div[style*="grid-template-columns: 1fr 1fr"] > div:first-child {
+    margin-bottom: 2rem;
+  }
+}
+iframe[src*="google.com/maps"] {
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+iframe[src*="google.com/maps"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+.contact iframe {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.contact-info {
+  flex: 1 1 220px;
+  text-align: left;
+  line-height: 1.6;
+}
+.contact-info p {
+  margin-bottom: 1rem;
+}
+.contact-info a {
+  color: #ff6f61;
+  font-weight: 600;
+}
+.contact-map {
+  flex: 0 0 300px;
+}
+.contact-cta {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+.extras {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+}

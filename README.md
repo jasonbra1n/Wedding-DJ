@@ -33,6 +33,8 @@ Originally created for **DJ Jason Brain (ΙΑΣΩΝ)**, serving Haliburton, Mind
   All booking/contact requests use [Formspree](https://formspree.io/) for secure submissions—no exposed email addresses or custom backend required.
 - **Modular Code Structure**  
   CSS and JavaScript are now in their own files (`styles.css` and `main.js`) for maintainability and scalability.
+- **Wedding DJ Packages Section**  
+  Clearly presents available wedding DJ packages, making it easy for clients to compare offerings.
 
 ---
 
@@ -49,7 +51,7 @@ Originally created for **DJ Jason Brain (ΙΑΣΩΝ)**, serving Haliburton, Mind
 
 3. **Customize for Your DJ Business**
     - Edit content in:
-        - `index.html` for structure and main content.
+        - `index.html` for structure, main content, and package details.
         - `styles.css` for colors, fonts, and layout.
         - `main.js` for header animation tweaks.
     - Update meta tags for SEO.
@@ -77,12 +79,16 @@ The header uses a JavaScript Canvas animation for a mesmerizing effect:
 
 ## 📸 Content Overview
 
-- **About Section**: DJ experience, style, and services.
-- **Venue Gallery**: Showcase venues with hover effects.
-- **Event Gallery**: Display past gigs.
-- **Audio Player**: Embed mixes via HearThis.at or Mixcloud.
-- **Contact & Booking**: Privacy-focused Formspree form for secure submissions.
-- **Scroll-to-Top Button**: Smooth return to top on scroll.
+Your landing page is organized into the following sections:
+
+- **About Section**: Details about the DJ, their experience, style, and services.
+- **Wedding DJ Packages**: A breakdown of available wedding DJ packages, features, and pricing, helping clients compare and choose.
+- **Venue Gallery**: Showcase venues where events have taken place, with interactive hover effects.
+- **Event Gallery**: Displays photos and highlights from past gigs and weddings.
+- **Audio Player**: Embedded HearThis.at player or Mixcloud link to showcase mixes.
+- **Contact & Booking**: Privacy-focused Formspree form for secure booking and inquiries.
+- **Scroll-to-Top Button**: Lets users easily navigate back to the top of the page.
+- **Other Sections**: Additional sections can be added as needed (testimonials, FAQ, etc.).
 
 ---
 

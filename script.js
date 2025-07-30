@@ -132,3 +132,12 @@ window.addEventListener('scroll', () => {
   else scrollToTopBtn.style.display = 'none';
 });
 scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Function to handle package selection
+function selectPackage(selectedElement) {
+  const packageCards = document.querySelectorAll('.package-card');
+  packageCards.forEach(card => {
+    card.classList.remove('popular'); // Remove 'popular' class from all cards
+  });
+  selectedElement.classList.add('popular'); // Add 'popular' class to the clicked card
+}

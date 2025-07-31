@@ -113,15 +113,14 @@ The site uses a sophisticated purple-to-orange gradient palette:
 
 ### Layout Sections
 1. **Hero Header** - Animated canvas with call-to-action
-2. **About** - Personal story and credentials with image
-3. **Audio Samples** - Three mix players showcasing versatility
-4. **Visual Production** - Premium service highlighting
-5. **Venues** - Supported venue types with images
-6. **Gallery** - Past event photography
-7. **Blog/FAQ** - Local SEO content
-8. **Fund the Vibes** - Tip/donation section
-9. **Packages** - Service tier pricing
-10. **Contact** - Form and map integration
+2. **About** - Personal story and credentials with image + audio samples
+3. **Venues** - Supported venue types with images
+4. **Gallery** - Past event photography
+5. **Blog/FAQ** - Local SEO content
+6. **Fund the Vibes** - Tip/donation section
+7. **Packages** - Service tier pricing
+8. **Contact** - Form and map integration
+9. **Visual Production** - Premium service add-on (positioned for upsell discovery)
 
 ---
 

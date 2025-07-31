@@ -272,7 +272,7 @@ MIT License — Free to use, remix, and distribute.
 ## 🙏 Credits
 
 **Created by**: [Jason Brain (ΙΑΣΩΝ)](https://jasonbrain.com)  
-**Contact**: [jason@weddingdj.jasonbrain.com](mailto:jason@weddingdj.jasonbrain.com)  
+**Contact**: [Open an Issue](https://github.com/jasonbra1n/Wedding-DJ/issues/new)  
 **Social**: [@JasonBra1n](https://x.com/JasonBra1n) | [@jason.bra1n](https://www.tiktok.com/@jason.bra1n)
 
 **Special Thanks**:

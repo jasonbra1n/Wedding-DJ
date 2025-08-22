@@ -143,6 +143,273 @@
       
     </section>
 
+    <!-- PLAYLIST SECTION STARTS HERE -->
+    <section class="playlist-section">
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .playlist-section { max-width: 1200px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 20px; text-align: center; }
+        .playlist-section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #291259; padding: 0.5rem 0; }
+        .playlist-intro { background: #f8f4ff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 4px solid #8146ff; }
+        .playlist-intro h3 { color: #291259; margin-bottom: 1rem; font-size: 1.8rem; }
+        .playlist-intro p { color: #666; font-size: 1.1rem; line-height: 1.6; max-width: 800px; margin: 0 auto 1rem auto; }
+        .genre-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 2rem 0; }
+        .filter-btn { padding: 0.5rem 1rem; background: #8146ff; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: #291259; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(41, 18, 89, 0.3); }
+        .search-container { margin: 2rem 0; }
+        .search-input { width: 100%; max-width: 400px; padding: 0.75rem; border: 2px solid #8146ff; border-radius: 25px; font-size: 1rem; text-align: center; }
+        .playlist-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; text-align: center; }
+        .stat-card { background: linear-gradient(135deg, #291259, #8146ff); color: white; padding: 1.5rem; border-radius: 15px; }
+        .stat-number { font-size: 2rem; font-weight: bold; display: block; margin-bottom: 0.5rem; }
+        .stat-label { font-size: 0.9rem; opacity: 0.9; }
+        .playlist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .song-card { background: white; border: 2px solid #f0f0f0; border-radius: 15px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: all 0.3s ease; text-align: left; }
+        .song-card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-color: #8146ff; }
+        .song-title { font-size: 1.1rem; font-weight: bold; color: #291259; margin-bottom: 0.5rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .song-artist { color: #666; margin-bottom: 1rem; font-size: 0.95rem; }
+        .song-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; color: #888; }
+        .song-genre { background: #8146ff; color: white; padding: 0.25rem 0.5rem; border-radius: 10px; font-size: 0.8rem; display: inline-block; margin: 0.5rem 0; }
+        .decade-tag { background: #ff6f61; color: white; padding: 0.25rem 0.5rem; border-radius: 10px; font-size: 0.8rem; display: inline-block; margin-left: 0.5rem; }
+        .bpm-indicator { display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0; }
+        .bpm-bar { background: #f0f0f0; height: 4px; border-radius: 2px; flex: 1; position: relative; overflow: hidden; }
+        .bpm-fill { background: linear-gradient(90deg, #8146ff, #ff6f61); height: 100%; border-radius: 2px; transition: width 0.3s ease; }
+        .load-more-btn { background: linear-gradient(135deg, #8146ff, #ff6f61); color: white; padding: 1rem 2rem; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin: 2rem auto; display: block; transition: all 0.3s ease; }
+        .load-more-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(129, 70, 255, 0.5); }
+        @media (max-width: 768px) {
+          .playlist-section { padding: 1rem; }
+          .playlist-section h2 { font-size: 2rem; }
+          .genre-filter { gap: 0.25rem; }
+          .filter-btn { font-size: 0.8rem; padding: 0.4rem 0.8rem; }
+          .playlist-grid { grid-template-columns: 1fr; gap: 1rem; }
+          .playlist-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+      </style>
+      <h2>Premium Wedding Playlist Collection</h2>
+      <div class="playlist-intro">
+        <h3>Curated for Unforgettable Celebrations</h3>
+        <p>
+          This carefully crafted collection represents decades of crowd-reading experience. From romantic first dance ballads 
+          to high-energy dance floor anthems, every song has been chosen to create perfect moments at your celebration.
+        </p>
+        <p>
+          <strong>54 expertly selected tracks</strong> spanning multiple decades and genres, ensuring something special 
+          for every guest and every moment of your wedding day.
+        </p>
+      </div>
+      <div class="playlist-stats">
+        <div class="stat-card">
+          <span class="stat-number" id="total-songs">54</span>
+          <span class="stat-label">Total Songs</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">7</span>
+          <span class="stat-label">Decades Covered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Genres</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3:52</span>
+          <span class="stat-label">Average Length</span>
+        </div>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" id="search-input" placeholder="Search songs or artists..." />
+      </div>
+      <div class="genre-filter">
+        <button class="filter-btn active" data-filter="all">All Songs</button>
+        <button class="filter-btn" data-filter="Rock">Rock Classics</button>
+        <button class="filter-btn" data-filter="Pop">Pop Hits</button>
+        <button class="filter-btn" data-filter="Hip Hop">Hip Hop</button>
+        <button class="filter-btn" data-filter="Country">Country</button>
+        <button class="filter-btn" data-filter="R&B">R&B/Soul</button>
+        <button class="filter-btn" data-filter="Electronic">Dance/Electronic</button>
+        <button class="filter-btn" data-filter="slow">Slow Dance</button>
+        <button class="filter-btn" data-filter="high-energy">High Energy</button>
+      </div>
+      <div class="playlist-grid" id="playlist-grid">
+        <!-- Songs will be dynamically loaded here -->
+      </div>
+      <button class="load-more-btn" id="load-more" style="display: none;">Load More Songs</button>
+      <script>
+        // Wedding playlist data
+        const playlistData = [
+          {"song": "Night Moves", "artist": "Bob Seger", "bpm": 119, "genre": "Rock", "year": 1976, "energy": 74, "dance": 71, "time": "05:24"},
+          {"song": "Jailhouse Rock", "artist": "Elvis Presley", "bpm": 167, "genre": "Rock", "year": 1958, "energy": 58, "dance": 65, "time": "02:26"},
+          {"song": "The Time (Dirty Bit)", "artist": "Black Eyed Peas", "bpm": 128, "genre": "Electronic", "year": 2010, "energy": 81, "dance": 82, "time": "05:07"},
+          {"song": "Time of Our Lives", "artist": "Pitbull, Ne-Yo", "bpm": 124, "genre": "Hip Hop", "year": 2014, "energy": 80, "dance": 72, "time": "03:49"},
+          {"song": "I Gotta Feeling", "artist": "Black Eyed Peas", "bpm": 128, "genre": "Electronic", "year": 2009, "energy": 77, "dance": 74, "time": "04:49"},
+          {"song": "You Shook Me All Night Long", "artist": "AC/DC", "bpm": 127, "genre": "Rock", "year": 1980, "energy": 77, "dance": 53, "time": "03:30"},
+          {"song": "Crazy Train", "artist": "Ozzy Osbourne", "bpm": 138, "genre": "Metal", "year": 1980, "energy": 91, "dance": 45, "time": "04:56"},
+          {"song": "Highway to Hell", "artist": "AC/DC", "bpm": 116, "genre": "Rock", "year": 1979, "energy": 91, "dance": 57, "time": "03:28"},
+          {"song": "Rock And Roll All Nite", "artist": "KISS", "bpm": 145, "genre": "Rock", "year": 1975, "energy": 93, "dance": 65, "time": "02:48"},
+          {"song": "Back In Black", "artist": "AC/DC", "bpm": 188, "genre": "Rock", "year": 1980, "energy": 70, "dance": 31, "time": "04:15"},
+          {"song": "Don't Stop Me Now", "artist": "Queen", "bpm": 156, "genre": "Rock", "year": 1978, "energy": 87, "dance": 56, "time": "03:29"},
+          {"song": "Thunderstruck", "artist": "AC/DC", "bpm": 134, "genre": "Rock", "year": 1990, "energy": 89, "dance": 50, "time": "04:52"},
+          {"song": "Picture", "artist": "Kid Rock, Sheryl Crow", "bpm": 98, "genre": "Rock", "year": 2001, "energy": 50, "dance": 69, "time": "04:58"},
+          {"song": "Pour Some Sugar On Me", "artist": "Def Leppard", "bpm": 85, "genre": "Rock", "year": 1987, "energy": 95, "dance": 27, "time": "04:27"},
+          {"song": "Cowboy", "artist": "Kid Rock", "bpm": 167, "genre": "Rock", "year": 1998, "energy": 90, "dance": 61, "time": "04:17"},
+          {"song": "American Pie", "artist": "Don McLean", "bpm": 138, "genre": "Rock", "year": 1971, "energy": 48, "dance": 53, "time": "08:36"},
+          {"song": "Riverboat Fantasy", "artist": "David Wilcox", "bpm": 123, "genre": "Rock", "year": 1983, "energy": 58, "dance": 82, "time": "03:37"},
+          {"song": "Do The Bearcat", "artist": "David Wilcox", "bpm": 109, "genre": "Rock", "year": 1977, "energy": 48, "dance": 83, "time": "03:25"},
+          {"song": "Let's Get It Started", "artist": "Black Eyed Peas", "bpm": 105, "genre": "Hip Hop", "year": 2000, "energy": 68, "dance": 78, "time": "03:38"},
+          {"song": "Smooth Criminal", "artist": "Alien Ant Farm", "bpm": 127, "genre": "Rock", "year": 2001, "energy": 96, "dance": 65, "time": "03:29"},
+          {"song": "One Last Breath", "artist": "Creed", "bpm": 127, "genre": "Rock", "year": 2001, "energy": 68, "dance": 39, "time": "03:58"},
+          {"song": "Takin' Care Of Business", "artist": "Bachman-Turner Overdrive", "bpm": 130, "genre": "Rock", "year": 1973, "energy": 70, "dance": 72, "time": "04:49"},
+          {"song": "Cocaine Blues", "artist": "Johnny Cash", "bpm": 122, "genre": "Country", "year": 1968, "energy": 57, "dance": 66, "time": "02:49"},
+          {"song": "A Boy Named Sue", "artist": "Johnny Cash", "bpm": 102, "genre": "Country", "year": 1969, "energy": 49, "dance": 63, "time": "03:53"},
+          {"song": "Jackson", "artist": "Johnny Cash, June Carter Cash", "bpm": 128, "genre": "Country", "year": 1967, "energy": 62, "dance": 74, "time": "02:45"},
+          {"song": "I Want You Back", "artist": "The Jackson 5", "bpm": 197, "genre": "R&B", "year": 1969, "energy": 54, "dance": 47, "time": "02:56"},
+          {"song": "Crazy Rap (Colt 45 & 2 Zig Zags)", "artist": "Afroman", "bpm": 99, "genre": "Hip Hop", "year": 2001, "energy": 37, "dance": 93, "time": "05:28"},
+          {"song": "Without Me", "artist": "Eminem", "bpm": 112, "genre": "Hip Hop", "year": 2002, "energy": 67, "dance": 91, "time": "04:50"},
+          {"song": "Drops of Jupiter", "artist": "Train", "bpm": 79, "genre": "Pop", "year": 2001, "energy": 64, "dance": 48, "time": "04:19"},
+          {"song": "How Far We've Come", "artist": "Matchbox Twenty", "bpm": 83, "genre": "Rock", "year": 2007, "energy": 91, "dance": 57, "time": "03:32"},
+          {"song": "Mr. Brightside", "artist": "The Killers", "bpm": 148, "genre": "Rock", "year": 2004, "energy": 91, "dance": 35, "time": "03:42"},
+          {"song": "Timber", "artist": "Pitbull, Kesha", "bpm": 130, "genre": "Electronic", "year": 2012, "energy": 96, "dance": 58, "time": "03:24"},
+          {"song": "Fireball", "artist": "Pitbull, John Ryan", "bpm": 123, "genre": "Hip Hop", "year": 2014, "energy": 93, "dance": 76, "time": "03:56"},
+          {"song": "I Wanna Dance with Somebody", "artist": "Whitney Houston", "bpm": 119, "genre": "Pop", "year": 1987, "energy": 82, "dance": 71, "time": "04:51"},
+          {"song": "Footloose", "artist": "Kenny Loggins", "bpm": 174, "genre": "Pop", "year": 1984, "energy": 90, "dance": 55, "time": "03:40"},
+          {"song": "Cotton Eye Joe", "artist": "Rednex", "bpm": 132, "genre": "Electronic", "year": 1994, "energy": 94, "dance": 73, "time": "03:14"},
+          {"song": "Man! I Feel Like A Woman!", "artist": "Shania Twain", "bpm": 125, "genre": "Country", "year": 1997, "energy": 64, "dance": 68, "time": "03:54"},
+          {"song": "Shout", "artist": "The Isley Brothers", "bpm": 137, "genre": "R&B", "year": 1959, "energy": 89, "dance": 46, "time": "04:32"},
+          {"song": "Mambo No. 5", "artist": "Lou Bega", "bpm": 174, "genre": "Pop", "year": 1999, "energy": 81, "dance": 62, "time": "03:40"},
+          {"song": "Old Time Rock & Roll", "artist": "Bob Seger", "bpm": 124, "genre": "Rock", "year": 1978, "energy": 94, "dance": 71, "time": "03:14"},
+          {"song": "All Star", "artist": "Smash Mouth", "bpm": 104, "genre": "Rock", "year": 1999, "energy": 87, "dance": 73, "time": "03:20"},
+          {"song": "Rockstar", "artist": "Nickelback", "bpm": 144, "genre": "Rock", "year": 2005, "energy": 91, "dance": 62, "time": "04:15"},
+          {"song": "I Love Rock 'N Roll", "artist": "Joan Jett & the Blackhearts", "bpm": 94, "genre": "Rock", "year": 1981, "energy": 72, "dance": 54, "time": "02:55"},
+          {"song": "Hit Me With Your Best Shot", "artist": "Pat Benatar", "bpm": 127, "genre": "Rock", "year": 1980, "energy": 58, "dance": 74, "time": "02:51"},
+          {"song": "Free Fallin'", "artist": "Tom Petty", "bpm": 84, "genre": "Rock", "year": 1989, "energy": 45, "dance": 62, "time": "04:16"},
+          {"song": "Money For Nothing", "artist": "Dire Straits", "bpm": 134, "genre": "Rock", "year": 1985, "energy": 65, "dance": 67, "time": "08:25"},
+          {"song": "Hold My Girl", "artist": "George Ezra", "bpm": 122, "genre": "Pop", "year": 2018, "energy": 53, "dance": 61, "time": "03:31"},
+          {"song": "I'm Good (Blue)", "artist": "David Guetta, Bebe Rexha", "bpm": 128, "genre": "Electronic", "year": 2022, "energy": 97, "dance": 56, "time": "02:55"},
+          {"song": "This Will Be", "artist": "Natalie Cole", "bpm": 127, "genre": "R&B", "year": 1975, "energy": 62, "dance": 69, "time": "02:51"},
+          {"song": "Landslide", "artist": "Fleetwood Mac", "bpm": 159, "genre": "Rock", "year": 1975, "energy": 16, "dance": 41, "time": "03:19"},
+          {"song": "No Horse To Ride", "artist": "Luke Grimes", "bpm": 121, "genre": "Country", "year": 2022, "energy": 33, "dance": 67, "time": "02:13"},
+          {"song": "Baby", "artist": "Justin Bieber, Ludacris", "bpm": 65, "genre": "Pop", "year": 2010, "energy": 86, "dance": 73, "time": "03:34"},
+          {"song": "Pump It", "artist": "Black Eyed Peas", "bpm": 154, "genre": "Hip Hop", "year": 2005, "energy": 93, "dance": 65, "time": "03:33"},
+          {"song": "Grow Old with You", "artist": "Adam Sandler", "bpm": 107, "genre": "Pop", "year": 1998, "energy": 38, "dance": 54, "time": "01:55"}
+        ];
+
+        let displayedSongs = 12;
+        let filteredSongs = [...playlistData];
+        let currentFilter = 'all';
+
+        function getDecade(year) {
+          return `${Math.floor(year / 10) * 10}s`;
+        }
+
+        function getEnergyLevel(energy) {
+          if (energy >= 80) return 'high-energy';
+          if (energy <= 40) return 'slow';
+          return 'medium';
+        }
+
+        function createSongCard(song) {
+          const decade = getDecade(song.year);
+          const energyLevel = getEnergyLevel(song.energy);
+          const bpmPercentage = Math.min((song.bpm / 200) * 100, 100);
+          
+          return `
+            <div class="song-card" data-genre="${song.genre}" data-energy="${energyLevel}">
+              <div class="song-title">${song.song}</div>
+              <div class="song-artist">${song.artist}</div>
+              <div class="song-genre">${song.genre}</div>
+              <span class="decade-tag">${decade}</span>
+              <div class="bpm-indicator">
+                <span style="font-size: 0.8rem; color: #888;">BPM: ${song.bpm}</span>
+                <div class="bpm-bar">
+                  <div class="bpm-fill" style="width: ${bpmPercentage}%"></div>
+                </div>
+              </div>
+              <div class="song-details">
+                <span>Energy: ${song.energy}/100</span>
+                <span>Dance: ${song.dance}/100</span>
+                <span>Duration: ${song.time}</span>
+                <span>Year: ${song.year}</span>
+              </div>
+            </div>
+          `;
+        }
+
+        function renderSongs() {
+          const grid = document.getElementById('playlist-grid');
+          const songsToShow = filteredSongs.slice(0, displayedSongs);
+          
+          grid.innerHTML = songsToShow.map(song => createSongCard(song)).join('');
+          
+          const loadMoreBtn = document.getElementById('load-more');
+          loadMoreBtn.style.display = displayedSongs < filteredSongs.length ? 'block' : 'none';
+          
+          // Update total songs counter
+          document.getElementById('total-songs').textContent = filteredSongs.length;
+        }
+
+        function filterSongs(filterType) {
+          currentFilter = filterType;
+          displayedSongs = 12;
+          
+          if (filterType === 'all') {
+            filteredSongs = [...playlistData];
+          } else if (filterType === 'slow') {
+            filteredSongs = playlistData.filter(song => song.energy <= 40);
+          } else if (filterType === 'high-energy') {
+            filteredSongs = playlistData.filter(song => song.energy >= 80);
+          } else {
+            filteredSongs = playlistData.filter(song => 
+              song.genre.includes(filterType)
+            );
+          }
+          
+          renderSongs();
+        }
+
+        function searchSongs(query) {
+          const searchTerm = query.toLowerCase();
+          
+          if (searchTerm === '') {
+            filterSongs(currentFilter);
+            return;
+          }
+          
+          let baseFilter = currentFilter === 'all' ? playlistData : 
+                          currentFilter === 'slow' ? playlistData.filter(song => song.energy <= 40) :
+                          currentFilter === 'high-energy' ? playlistData.filter(song => song.energy >= 80) :
+                          playlistData.filter(song => song.genre.includes(currentFilter));
+          
+          filteredSongs = baseFilter.filter(song => 
+            song.song.toLowerCase().includes(searchTerm) ||
+            song.artist.toLowerCase().includes(searchTerm)
+          );
+          
+          displayedSongs = 12;
+          renderSongs();
+        }
+
+        // Event listeners
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterSongs(btn.dataset.filter);
+          });
+        });
+
+        document.getElementById('search-input').addEventListener('input', (e) => {
+          searchSongs(e.target.value);
+        });
+
+        document.getElementById('load-more').addEventListener('click', () => {
+          displayedSongs += 12;
+          renderSongs();
+        });
+
+        // Initial render
+        renderSongs();
+      </script>
+    </section>
+    <!-- PLAYLIST SECTION ENDS HERE -->
+
+    
     <section class="venues">
       <h2>Versatile Venues for Wedding DJs in Ontario</h2>
       <div class="venue-card">

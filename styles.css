@@ -51,24 +51,6 @@ footer { background: #291259; color: white; text-align: center; padding: 1rem; }
 footer a { color: #ff6f61; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  header h1 { font-size: 2rem; }
-  header p { font-size: 1rem; }
-  .container { padding: 1rem; gap: 2rem; }
-  h2 { font-size: 1.8rem; }
-  .venue-card { width: 150px; }
-  hr { width: 80%; }
-  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
-  .visual-production .visual-grid {
-    grid-template-columns: 1fr !important; /* Override inline grid for mobile */
-    display: block !important; /* Ensure block display for single column */
-  }
-  .visual-production .visual-grid > div:first-child {
-    margin-bottom: 2rem;
-  }
-}
-
 /* Google Maps iframe specific styles */
 iframe[src*="google.com/maps"] {
   transition: transform .25s ease, box-shadow .25s ease;
@@ -512,10 +494,19 @@ iframe[src*="google.com/maps"]:hover {
 }
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin: 2rem 0;
 }
+
+/* Force 4 columns on larger screens */
+@media (min-width: 1200px) {
+  .packages-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 .package-card {
   background: white;
   border-radius: 15px;
@@ -538,7 +529,6 @@ iframe[src*="google.com/maps"]:hover {
   font-size: 0.9rem;
   font-weight: bold;
 }
-
 .package-badge.budget {
   background: #28a745;
 }
@@ -924,8 +914,38 @@ iframe[src*="google.com/maps"]:hover {
   box-shadow: 0 8px 25px rgba(255, 111, 97, 0.6);
 }
 
-/* Mobile responsiveness for testimonials */
+/* Footer specific style */
+.footer-italic-text {
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  .container { padding: 1rem; gap: 2rem; }
+  h2 { font-size: 1.8rem; }
+  .venue-card { width: 150px; }
+  hr { width: 80%; }
+  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
+  .visual-production .visual-grid {
+    grid-template-columns: 1fr !important; /* Override inline grid for mobile */
+    display: block !important; /* Ensure block display for single column */
+  }
+  .visual-production .visual-grid > div:first-child {
+    margin-bottom: 2rem;
+  }
+  /* Mobile packages styling */
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .package-card.popular {
+    transform: none; /* Remove scaling on mobile to prevent layout issues */
+  }
+  /* Mobile testimonials responsiveness */
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -945,24 +965,8 @@ iframe[src*="google.com/maps"]:hover {
   }
 }
 
-/* Footer specific style */
-.footer-italic-text {
-  font-size:0.95rem;
-  color:#888;
-  font-style:italic;
-}
-
 @media (max-width: 600px) {
   .contact-card {
     padding: 1.5rem;
-  }
-}
-@media (max-width: 768px) {
-  .packages-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .package-card.popular {
-    transform: none; /* Remove scaling on mobile */
   }
 }

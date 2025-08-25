@@ -538,6 +538,10 @@ iframe[src*="google.com/maps"]:hover {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+.package-badge.budget {
+  background: #28a745;
+}
 .package-badge.essential {
   background: #8146ff;
 }

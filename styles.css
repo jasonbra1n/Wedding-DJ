@@ -957,3 +957,12 @@ iframe[src*="google.com/maps"]:hover {
     padding: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .package-card.popular {
+    transform: none; /* Remove scaling on mobile */
+  }
+}

@@ -541,6 +541,9 @@ iframe[src*="google.com/maps"]:hover {
 .package-badge.luxury {
   background: #291259;
 }
+.package-badge.ceremony {
+  background: #6f42c1;
+}
 .package-card h3 {
   color: #291259;
   margin-bottom: 1rem;
@@ -778,7 +781,94 @@ iframe[src*="google.com/maps"]:hover {
   font-style: italic;
 }
 
-/* Testimonials Section */
+/* Ceremony Only Section */
+.ceremony-only-section {
+  margin: 3rem 0 2rem 0;
+  padding: 2rem 0;
+  border-top: 3px solid #6f42c1;
+  background: linear-gradient(135deg, #f8f4ff, #fff);
+}
+
+.ceremony-only-section h3 {
+  color: #6f42c1;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ceremony-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.ceremony-package-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.ceremony-card {
+  max-width: 400px;
+  border: 3px solid #6f42c1;
+  box-shadow: 0 12px 32px rgba(111, 66, 193, 0.15);
+}
+
+.ceremony-note-box {
+  background: rgba(111, 66, 193, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  border-left: 4px solid #6f42c1;
+}
+
+.ceremony-note-box p {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.ceremony-note-box p:last-child {
+  margin-bottom: 0;
+}
+
+.ceremony-note-box strong {
+  color: #6f42c1;
+}
+
+.ceremony-note-box .small-text {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Mobile ceremony section */
+@media (max-width: 768px) {
+  .ceremony-only-section {
+    margin: 2rem 0 1rem 0;
+    padding: 1.5rem 0;
+  }
+  
+  .ceremony-only-section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .ceremony-card {
+    max-width: 100%;
+  }
+  
+  .ceremony-note-box {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+  }
+}
 .testimonials {
   margin: 3rem 0;
   text-align: center;

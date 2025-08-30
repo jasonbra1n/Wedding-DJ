@@ -736,10 +736,35 @@
       <div class="testimonials-cta-box">
         <h4>Ready to Create Your Own Success Story?</h4>
         <p>Join hundreds of couples who've trusted Jason Brain to make their wedding day legendary.</p>
-        <button class="testimonials-cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-          Book Your Consultation
-        </button>
+        <button class="testimonials-cta-button" onclick="toggleTestimonialForm()">Submit Your Testimonial</button>
+        <div id="testimonial-form-container" style="display: none; margin-top: 2rem;">
+          <form class="contact-form" action="https://formspree.io/f/xandolaw" method="POST">
+            <div class="form-group">
+              <label for="testimonial-name">Your Name(s)</label>
+              <input type="text" id="testimonial-name" name="name" class="form-input" required placeholder="e.g., John & Jane or Vendor Name">
+            </div>
+            <div class="form-group">
+              <label for="testimonial-type">Are You a Couple or Vendor?</label>
+              <select id="testimonial-type" name="type" class="form-input" required>
+                <option value="Couple">Couple</option>
+                <option value="Vendor">Vendor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="testimonial-location">Event Location</label>
+              <input type="text" id="testimonial-location" name="location" class="form-input" required placeholder="e.g., Tent Wedding, Haliburton">
+            </div>
+            <div class="form-group">
+              <label for="testimonial-message">Your Testimonial</label>
+              <textarea id="testimonial-message" name="testimonial" class="form-textarea" required placeholder="Share your experience with Jason Brain's services"></textarea>
+            </div>
+            <button type="submit" class="form-submit-button">Submit Testimonial</button>
+            <p class="noscript-message">Please enable JavaScript to use the testimonial form, or reach out via our <a href="https://x.com/jasonbraindj" target="_blank">X account</a> or <a href="https://www.tiktok.com/@jasonbraindj" target="_blank">TikTok</a>.</p>
+          </form>
+        </div>
+        <p><a href="#contact" class="testimonials-cta-button">Book Your Consultation</a></p>
       </div>
+
     </section>
   </div> <!-- Close container div HERE -->
   

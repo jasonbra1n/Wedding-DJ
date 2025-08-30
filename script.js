@@ -1,4 +1,3 @@
-// Set dynamic booking year
 document.getElementById('booking-year').textContent = new Date().getFullYear() + 1;
 
 const canvas = document.querySelector('.lights');
@@ -88,7 +87,6 @@ header.addEventListener('mousemove', (event) => {
 });
 
 header.addEventListener('touchmove', (event) => {
-  // Do not prevent default to allow scrolling
   const touch = event.touches[0];
   const rect = header.getBoundingClientRect();
   targetX = touch.clientX - rect.left;
@@ -99,19 +97,16 @@ header.addEventListener('mousedown', (event) => {
   const rect = header.getBoundingClientRect();
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;
-  // Only trigger ripple if not clicking the button
   if (!ctaButton.contains(event.target)) {
     ripples.push({ x, y, radius: 10, opacity: 1 });
   }
 });
 
 header.addEventListener('touchstart', (event) => {
-  // Do not prevent default to allow button taps
   const touch = event.touches[0];
   const rect = header.getBoundingClientRect();
   const x = touch.clientX - rect.left;
   const y = touch.clientY - rect.top;
-  // Only trigger ripple if not tapping the button
   if (!ctaButton.contains(event.target)) {
     ripples.push({ x, y, radius: 10, opacity: 1 });
   }
@@ -133,11 +128,15 @@ window.addEventListener('scroll', () => {
 });
 scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Function to handle package selection
 function selectPackage(selectedElement) {
   const packageCards = document.querySelectorAll('.package-card');
   packageCards.forEach(card => {
-    card.classList.remove('popular'); // Remove 'popular' class from all cards
+    card.classList.remove('popular');
   });
-  selectedElement.classList.add('popular'); // Add 'popular' class to the clicked card
+  selectedElement.classList.add('popular');
+}
+
+function toggleTestimonialForm() {
+  const formContainer = document.getElementById('testimonial-form-container');
+  formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
 }

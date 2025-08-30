@@ -930,7 +930,7 @@ iframe[src*="google.com/maps"]:hover {
 /* Add quotation marks */
 .testimonial-quote p::before {
   content: '"';
-  font-size: 2em;
+  font-size: 1rem;
   color: #8146ff;
   position: absolute;
   left: -0.5em;
@@ -940,10 +940,11 @@ iframe[src*="google.com/maps"]:hover {
 
 .testimonial-quote p::after {
   content: '"';
-  font-size: 2em;
+  font-size: 1rem;
   color: #8146ff;
   font-family: serif;
-}
+} 
+
 
 .testimonial-author {
   border-top: 2px solid #f0f0f0;
